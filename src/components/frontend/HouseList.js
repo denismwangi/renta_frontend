@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import AllHousesService from './service/House.service';
 import SearchSection from '../../components/frontend/SearchSection';
 import WhyUs from '../../components/frontend/WhyUs';
-import '../../assets/css/font-awesome.min.css';
+
 
 export class HouseList extends Component {
 
@@ -55,7 +55,7 @@ export class HouseList extends Component {
      <div class="col-lg-4 col-md-6 mix all restaurent hotel rounded-circle" >
   <div className="property-item">
     <div className="pi-pic set-bg" >
-    <img src="https://i.pinimg.com/564x/40/5a/82/405a827ceb3fc18fbb480b9f6a18f4aa.jpg" className="img-fluid" alt="" />
+    <img src={house.url} className="img-fluid" alt="" />
       <div className="label">{house.category}</div>
     </div>
     <div className="pi-text">

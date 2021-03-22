@@ -1,20 +1,16 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import '../assets/css/bootstrap.min.css';
-import '../assets/css/font-awesome.min.css';
-import '../assets/css/style.css';
-import '../assets/css/font-awesome.min.css';
-import '../assets/css/elegant-icons.css';
-//import '../assets/css/jquery-ui.min.css';
-import '../assets/css/nice-select.css';
-//import '../assets/css/owl.carousel.min.css';
-import '../assets/css/magnific-popup.css';
-import '../assets/css/slicknav.min.css';
-//import '.elegant-icons-sass';
-import '../assets/extra-libs/c3/c3.min.css';
- import '../assets/libs/chartist/dist/chartist.min.css';
-import '../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css';
-//import '../assets/dist/css/style.min.css';
+// import '../assets/css/bootstrap.min.css';
+// import '../assets/css/font-awesome.min.css';
+// import '../assets/css/style.css';
+// import '../assets/css/font-awesome.min.css';
+// //import '../assets/css/elegant-icons.css';
+// //import '../assets/css/jquery-ui.min.css';
+// import '../assets/css/nice-select.css';
+// //import '../assets/css/owl.carousel.min.css';
+// import '../assets/css/magnific-popup.css';
+// import '../assets/css/slicknav.min.css';
+
 
 
 

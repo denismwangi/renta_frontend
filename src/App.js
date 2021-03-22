@@ -10,8 +10,11 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register'
 import { HashRouter } from 'react-router-dom'
-import index from './components/Backend';
 import Img from './img3.jpg';
+import { Topnav } from './components/Backend/layout/Topnav';
+import MainContent from './components/Backend/mainContent/MainContent';
+
+
 
 function App() {
   return (
@@ -28,7 +31,7 @@ function App() {
       <Route path="/Login" component={Login}/>
       <Route path="/Register" component={Register}/>
       <Route path="#"/>
-      <Route path="/Admin" exact component={index}/>
+      <Route path="/Admin" exact component={MainContent}/>
       {/*<Footer/> */}
       
 
