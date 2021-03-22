@@ -1,6 +1,7 @@
 import React, { Component , useState} from 'react'
 import Sidenav from '../layout/Sidenav'
 import Topnav from '../layout/Topnav'
+import Main from '../main/Main'
 import Navbar from '../Navbar/Navbar'
 import './main.css'
 
@@ -19,6 +20,7 @@ const closeSidebar = () =>{
         return (
             <div className="container">
               <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar}/>
+              <Main/>
               <Sidenav sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/>
             </div>
         )
