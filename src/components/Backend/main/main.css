@@ -33,8 +33,7 @@ main{
     margin: 20px 0;
 }
 .card{
-    display: flex;
-    flex-direction: space-column;
+    align-items: center;
     height: 70px;
     padding: 25px;
     border-radius: 5px;
@@ -42,9 +41,10 @@ main{
     box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
 }
 
+
 .card-inner{
-    display: flex;
-    align-items: center;
+    
+    
     justify-content: space-between;
 }
 .card-inner > span{

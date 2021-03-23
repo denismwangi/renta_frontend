@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react'
+import logo from '../../../assets/images/logo.png'
 import './side.css'
 
 
@@ -7,8 +8,8 @@ const Sidenav = ({sidebarOpen,closeSidebar }) =>{
     return (
       <div className={sidebarOpen ?  "sidebar-responsive" : ""} id="sidebar">
         <div className="sidebar-title">
-          <div className="sidebar-image">
-            <img/>
+          <div className="sidebar-img">
+            <img src={logo} width="70px" />
             <h1>Renta</h1>
 
           </div>
@@ -38,6 +39,22 @@ const Sidenav = ({sidebarOpen,closeSidebar }) =>{
             <i className="fa fa-user"></i>
             <a href="#">All customers</a>
 
+          </div>
+          <h2>Transactions</h2>
+          <div className="sidebar-link">
+            <i className="fa fa-money"></i>
+            <a href="#">All Transactions</a>
+
+          </div>
+          <div className="sidebar-link">
+            <i className="fa fa-money"></i>
+            <a href="#">All Transactions</a>
+
+          </div>
+          <div className="sidebar-link">
+            <i className="fa fa-money"></i>
+            <a href="#">All Transactions</a>
+            
           </div>
           <h2>Transactions</h2>
           <div className="sidebar-link">

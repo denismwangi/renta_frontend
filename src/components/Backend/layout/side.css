@@ -9,22 +9,30 @@
 
 .sidebar-title{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: #265acc;
     margin-bottom: 30px;
 
-}
-.sidebar-image{
+} 
+.sidebar-img{
     display: flex;
     align-items: center;
 }
+.sidebar-img > img{
+    border-radius: 50%;
+} 
 .sidebar-title > div > h1{
     font-size:18px ;
     display: inline;
+    margin-left: 20px;
+}
+.sidebar-imge > div > img{
+    width: 75px;
+    object-fit: contain;
 }
 .sidebar-title > i{
-    font-size: 18px;
+    font-size: 32px;
     display: none;
 }
 .sidebar-menu > h2{
@@ -80,8 +88,9 @@
     position: absolute;
 
 }
-@media only screen and(max-width: 978px){
-    #sidebar{
+
+@media (max-width: 978px) {
+    #sidebar {
         display: none;
     }
     .sidebar-title > i {

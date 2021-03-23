@@ -14,9 +14,9 @@ const Main = () =>{
                 </div>
             </div>
             <div className="main-cards">
-                <div className="card">
-                    <div style={{marginBottom:'10px'}}>
-                    <i className="fa fa-user-o fa-2x text-lightblue" style={{marginLeft: '40px'}}></i>
+                <div className="card"> 
+                <div className="icon">
+                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
                     </div>
                     <div className="card-inner">
                         <p className="text-primary-p">nummber of customers</p>
@@ -31,7 +31,7 @@ const Main = () =>{
                         </div>
                 </div>
                     <div className="card">
-                        <i className="fa fa-video-camera fa-2x text-yellow" style={{marginLeft: '40px'}}></i>
+                        <i className="fa fa-video-camera fa-2x text-yellow"></i>
 
                             <div className="card-inner">
                                 <p className="text-primary-p">Number of videos</p>
@@ -63,7 +63,7 @@ const Main = () =>{
                            <h1>stats reports</h1>
                            <p>cuplino , Califonia USA</p>
                        </div>
-                       <i className="fa fa-use"></i>
+                       <i className="fa fa-usd"></i>
                    </div>
                 <div className="charts-right-cards">
                     <div className="card1">
