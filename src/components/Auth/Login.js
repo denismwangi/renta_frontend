@@ -1,62 +1,110 @@
 import React, { Component } from 'react'
-// import './login.css'
+ import './login.css'
+ import log from './log.svg';
+ import reg from './register.svg'
+import Header from '../../layout/Header';
 
 export class Login extends Component {
     render() {
         return (
+          
             <div>
-  <div className="overlay">
-  {/* LOGN IN FORM by Omar Dsoky */}
-  <form>
-    {/*   con = Container  for items in the form*/}
-    <div className="con">
-      {/*     Start  header Content  */}
-      <header className="head-form">
-        <h2>Log In</h2>
-        {/*     A welcome message or an explanation of the login form */}
-        <p>login here using your username and password</p>
-      </header>
-      {/*     End  header Content  */}
-      <br />
-      <div className="field-set">
-        {/*   user name */}
-        <span className="input-item">
-          <i className="fa fa-user-circle" />
-        </span>
-        {/*   user name Input*/}
-        <input className="form-input" id="txt-input" type="text" placeholder="@UserName" required />
-        <br />
-        {/*   Password */}
-        <span className="input-item">
-          <i className="fa fa-key" />
-        </span>
-        {/*   Password Input*/}
-        <input className="form-input" type="password" placeholder="Password" id="pwd" name="password" required />
-        {/*      Show/hide password  */}
-        <span>
-          <i className="fa fa-eye" aria-hidden="true" type="button" id="eye" />
-        </span>
-        <br />
-        {/*        buttons */}
-        {/*      button LogIn */}
-        <button className="log-in"> Log In </button>
-      </div>
-      {/*   other buttons */}
-      <div className="other">
-        {/*      Forgot Password button*/}
-        <button className="btn submits frgt-pass">Forgot Password</button>
-        {/*     Sign Up button */}
-        <button className="btn submits sign-up">Sign Up 
-          {/*         Sign Up font icon */}
-          <i className="fa fa-user-plus" aria-hidden="true" />
-        </button>
-        {/*      End Other the Division */}
-      </div>
-      {/*   End Conrainer  */}
+              <Header/>
+  <div>
+  <div class="container-login">
+  <div className="forms-container">
+    <div className="signin-signup">
+      <form action="#" className="sign-in-form">
+        <h2 className="title">Sign in</h2>
+        <div className="input-field">
+          <i className="fas fa-user" />
+          <input type="text" placeholder="Username" />
+        </div>
+        <div className="input-field">
+          <i className="fas fa-lock" />
+          <input type="password" placeholder="Password" />
+        </div>
+        <input type="submit" defaultValue="Login" className="btn solid" />
+        <p className="social-text">Or Sign in with social platforms</p>
+        <div className="social-media">
+          <a href="#" className="social-icon">
+            <i className="fab fa-facebook-f" />
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-twitter" />
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-google" />
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-linkedin-in" />
+          </a>
+        </div>
+      </form>
+      <form action="#" className="sign-up-form">
+        <h2 className="title">Sign up</h2>
+        <div className="input-field">
+          <i className="fas fa-user" />
+          <input type="text" placeholder="Username" />
+        </div>
+        <div className="input-field">
+          <i className="fas fa-envelope" />
+          <input type="email" placeholder="Email" />
+        </div>
+        <div className="input-field">
+          <i className="fas fa-lock" />
+          <input type="password" placeholder="Password" />
+        </div>
+        <input type="submit" className="btn" defaultValue="Sign up" />
+        <p className="social-text">Or Sign up with social platforms</p>
+        <div className="social-media">
+          <a href="#" className="social-icon">
+            <i className="fab fa-facebook-f" />
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-twitter" />
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-google" />
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-linkedin-in" />
+          </a>
+        </div>
+      </form>
     </div>
-    {/* End Form */}
-  </form>
+  </div>
+  <div className="panels-container">
+    <div className="panel left-panel">
+      <div className="content">
+        <h3>New here ?</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+          ex ratione. Aliquid!
+        </p>
+        <button className="btn transparent" id="sign-up-btn">
+          Sign up
+        </button>
+      </div>
+      <img src={log} className="image" alt />
+    </div>
+    <div className="panel right-panel">
+      <div className="content">
+        <h3>One of us ?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          laboriosam ad deleniti.
+        </p>
+        <button className="btn transparent" id="sign-in-btn">
+          Sign in
+        </button>
+      </div>
+      <img src={reg} className="image" alt />
+    </div>
+  </div>
 </div>
+</div>
+
 
 </div>
 
