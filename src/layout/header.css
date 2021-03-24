@@ -1,4 +1,4 @@
-.navbar{
+.header-nav{
     background:#ffffff ;
     /* grid-area: nav; */
     height:60px;
@@ -7,8 +7,17 @@
     justify-content: space-between;
     padding: 0 30px 0 30px;
     border-bottom: 1px solid lightgray;
+    position: fixed;
+    width: 100%;
    
 }
+.header-logo-img{
+    display: flex;
+    align-items: center;
+}
+.header-logo-img > img{
+    border-radius: 50%;
+} 
 .nav-icon{
     display: none;
     
@@ -29,27 +38,28 @@
     border-bottom: 3px solid #265acc;
     padding-bottom: 12px;
 }
-.navbar-right{
+.header-right{
     display: flex;
     justify-content:center;
     align-items: center;
-    
+    margin-right: 40px;
 }
-.navbar-right > a{
-    margin-left: 20px;
+.header-right > a{
+    margin-right: 30px;
     text-decoration: none;
+    color: #a5aaad;
+    font-size: 15px;
+    font-weight: 700;
 }
-.navbar-right > a >img{
+.header-right > a >img{
     border-radius: 50%;
 }
-.navbar-right > a > i{
+.header-right > a > i{
     color:#a5aaad;
     font-size: 16px;
-    border-radius: 50px;
-    background: #ffffff;
-    box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px #ffffff;
+
     padding: 7px;
-    width: 150px;
+    
 }
 @media (max-width: 978px) {
     .nav-icon{
@@ -59,7 +69,10 @@
 }
 
 @media (max-width: 978px){
-    .navbar-left{
+    .header-right{
         display: none;
+    }
+    .header-logo-img{
+        margin-right: 50px;
     }
 }

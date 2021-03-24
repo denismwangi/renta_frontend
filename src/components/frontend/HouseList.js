@@ -26,7 +26,6 @@ export class HouseList extends Component {
                     </div>
                     
                 </div>
-                
             </div>
               <div className="house">
                 <div className="house-left">
@@ -37,7 +36,7 @@ export class HouseList extends Component {
                     </div>
                       <div>
                           <h1>Daily Report</h1>
-                          <h4>cuplino , Califonia USA</h4>
+                          <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
                           <h5>Ksh 1.2M</h5>
                           <p>added 2 mins ago</p>
                       </div>
@@ -54,7 +53,41 @@ export class HouseList extends Component {
                     </div>
                       <div>
                       <h1>Daily Report</h1>
-                          <h4>cuplino , Califonia USA</h4>
+                      <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
+                          <h5>Ksh 1.2M</h5>
+                          <p>added 2 mins ago</p>
+                      </div>
+                      <i className="fa fa-usd"></i>
+                  </div>
+                </div>
+                </div>
+                <div className="house">
+                <div className="house-left">
+                  <div className="house-left-title">
+                  <div className="house-img">
+                      <img src={bingo}/>
+
+                    </div>
+                      <div>
+                      <h1>Daily Report</h1>
+                      <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
+                          <h5>Ksh 1.2M</h5>
+                          <p>added 2 mins ago</p>
+                      </div>
+                      <i className="fa fa-usd"></i>
+                  </div>
+                </div>
+                </div>
+                <div className="house">
+                <div className="house-left">
+                  <div className="house-left-title">
+                  <div className="house-img">
+                      <img src={bingo}/>
+
+                    </div>
+                      <div>
+                      <h1>Daily Report</h1>
+                      <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
                           <h5>Ksh 1.2M</h5>
                           <p>added 2 mins ago</p>
                       </div>

@@ -95,7 +95,8 @@ main{
     font-size: 14px;
     font-weight: 700;
     margin-top: 60px;
-    color: #429bf5;
+    color: #2691ED 
+    ;
 
 }
 .house-left-title > div > p{
@@ -128,15 +129,16 @@ main{
     font-size: 30px;
     top: calc(50% - 0.5em); /* Keep icon in center of input, regardless of the input height */
   }
-  input{
-    padding-left: 17px;
-    width: 880px;
+  #stuff{
+    padding-left: 10px;
+    width: 800px;
     height: 54px;
     border-radius: 25px;
     border: none;
   }
   .input-wrapper{
     position: relative;
+    margin-top: 10px;
   }
 .chart-right-title{
     display: flex;
@@ -216,7 +218,7 @@ main{
     .house{
         width:99%;
     }
-    input{
+    #stuff{
         width: 400px;
     }
     .house-img{

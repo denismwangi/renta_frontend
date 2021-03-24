@@ -10,25 +10,59 @@ const SideView = () =>{
         <div className="sidebar-title">
         </div>
         <div className="sidebar-menu">
-          <div className="sidebar-link side-active-link">
-            <i className="fa fa-home"></i>
-            <a href="#">Dashboard</a>
-          </div>
           <div className="sidebar-link">
-            <i className="fa fa-building"></i>
-            <a href="#">All Properties</a>
-
+            <i className="fa fa-sort"></i>
+            <a href="#">Sort by</a>
+            <hr/>
           </div>
-          <div className="sidebar-link">
-            <i className="fa fa-building-o"></i>
+          <div class="input-sort">
+            <input id="sort" placeholder="Sort by"/>
+            <label for="sort" class="fa fa-sort input-sort-icon"></label>
+          </div>
+         
+          <h2>Categories</h2>
+          <hr/>
+          <div className="sideview-link">
+            <a href="#"> Apartments for Rent</a>
+            </div>
+            <div className="sideview-link">
+            <a href="#"> Apartments for sale</a>
+            </div>
+            <div className="sideview-link">
+            <a href="#"> Houses for Sale</a>
+            </div>
+          
+            <div className="sideview-link">
+            <a href="#"> Bedsitters Rent</a>
+          </div>
+          <div className="sideview-link">
             <a href="#">Sold Properties</a>
-
           </div>
-          <div className="sidebar-link">
-            <i className="fa fa-user"></i>
+          <div className="sideview-link">
             <a href="#">All customers</a>
           </div>
-        </div>
+          <h2>Locations</h2>
+          <hr/>
+          <div className="sideview-link">
+            <a href="#">Nairobi</a>
+          </div>
+          <div className="sideview-link">
+          <a href="#">Coast</a>
+          </div>
+          <div className="sideview-link">
+            <a href="#">Kiambu</a>
+          </div>
+          <div className="sideview-link">
+            <a href="#">Central</a>
+          </div>
+          <h2>Price</h2>
+          <hr/>
+          <div class="input-min-price">
+            <input id="min" placeholder="Enter Price"/>
+            <label for="min" class="fa fa-sort input-price-min-icon"></label>
+          </div>
+          </div>
+  
 
       </div>
     )
