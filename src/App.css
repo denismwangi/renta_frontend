@@ -25,6 +25,7 @@
 body{
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  background: #f3f4f6;
 }
 .text-primary-p{
   color: #a5aaad;

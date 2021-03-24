@@ -2,96 +2,100 @@ import React, { Component } from 'react'
 import AllHousesService from './service/House.service';
 import SearchSection from '../../components/frontend/SearchSection';
 import WhyUs from '../../components/frontend/WhyUs';
+import './houselist.css'
+import bingo from './bingo.jpg';
 
 
 export class HouseList extends Component {
 
-  constructor(props){
-    super(props)
-
-    this.state = {
-      houses : []
-    }
-  }
-
-  componentDidMount(){
-    AllHousesService.getHouses().then((res) =>{
-      this.setState({houses: res.data});
-    });
-  }
+  
     render() {
         return (      
-          <div>
-            <SearchSection/>
- <section className="property-section latest-property-section spad">
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-5">
-        <div className="section-title">
-          <h4>Latest PROPERTY</h4>
-        </div>
-      </div>
-      <div className="col-lg-7">
-        <div className="property-controls">
-          <ul>
-            <li data-filter="all">All</li>
-            <li data-filter=".apart">Apartment</li>
-            <li data-filter=".house">House</li>
-            <li data-filter=".office">Office</li>
-            <li data-filter=".hotel">Hotel</li>
-            <li data-filter=".restaurent">Restaurent</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div>
-    
       
-    <div className="row property-filter">
-    {
-      this.state.houses.map(
-        house =>
-        
-     <div class="col-lg-4 col-md-6 mix all restaurent hotel rounded-circle" >
-  <div className="property-item">
-    <div className="pi-pic set-bg" >
-    <img src={house.url} className="img-fluid" alt="" />
-      <div className="label">{house.category}</div>
-    </div>
-    <div className="pi-text">
-      <a href="#" className="heart-icon"><span className="icon_heart_alt" /></a>
-      <div className="pt-price">{house.price}<span>Ksh</span></div>
-      <h5><a href="#">{house.location}</a></h5>
-      <p><span className="icon_pin_alt" /> 3 Middle Winchendon Rd, Rindge, NH 03461</p>
-      <ul>
-        <li><i className="fa fa-bed" />{house.roomSize}</li>
-      </ul>
-      <div className="pi-agent">
-        <div className="pa-item">
-          <div className="pa-info">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIkoThZW6Z4ElVojB16Paxlv85AXglOotItQ&usqp=CAU" alt />
-            <h6>Ashton Kutcher</h6>
+         <main>
+        <div className="main-container">
+            <div className="main-title">
+                <img/>
+                <div className="main-greeting">
+                    <div class="input-wrapper">
+                      <input id="stuff" placeholder="Search ........."/>
+                      <label for="stuff" class="fa fa-search input-icon"></label>
+                    </div>
+                    <div className="listing">
+                    <h5>All listings</h5>
+                    </div>
+                    
+                </div>
+                
+            </div>
+              <div className="house">
+                <div className="house-left">
+                  <div className="house-left-title">
+                    <div className="house-img">
+                      <img src={bingo}/>
+
+                    </div>
+                      <div>
+                          <h1>Daily Report</h1>
+                          <h4>cuplino , Califonia USA</h4>
+                          <h5>Ksh 1.2M</h5>
+                          <p>added 2 mins ago</p>
+                      </div>
+                      <i className="fa fa-usd"></i>
+                  </div>
+                </div>
+                </div>
+                <div className="house">
+                <div className="house-left">
+                  <div className="house-left-title">
+                  <div className="house-img">
+                      <img src={bingo}/>
+
+                    </div>
+                      <div>
+                      <h1>Daily Report</h1>
+                          <h4>cuplino , Califonia USA</h4>
+                          <h5>Ksh 1.2M</h5>
+                          <p>added 2 mins ago</p>
+                      </div>
+                      <i className="fa fa-usd"></i>
+                  </div>
+                </div>
+                </div>
+             
+                
+            
+               {/* <div className="chart-right">
+                   <div className="chart-right-title">
+                       <div>
+                           <h1>stats reports</h1>
+                           <p>cuplino , Califonia USA</p>
+                       </div>
+                       <i className="fa fa-usd"></i>
+                   </div>
+                <div className="charts-right-cards">
+                    <div className="card1">
+                        <h1>Income</h1>
+                        <p>$876</p>
+                    </div>
+                    <div className="card2">
+                        <h1>Sales</h1>
+                        <p>$87698</p>
+                    </div>
+                    <div className="card3">
+                        <h1>Users</h1>
+                        <p>900</p>
+                    </div>
+                    <div className="card4">
+                        <h1>Order</h1>
+                        <p>876</p>
+                    </div> 
+                </div> 
+        </div>*/}
           </div>
-          <div className="pa-text">
-            123-455-688
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+     
+    </main>
 
-
-
-      )
-    }
-    </div>
-   
-    </div>
-  </div>
-</section>
-<WhyUs/>
-</div>
 
             
         )
