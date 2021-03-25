@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import './header.css';
 import logo from '../assets/images/logo.png'
+import MainContent from '../components/Backend/mainContent/MainContent';
 
 
 
@@ -16,7 +17,6 @@ const Header = ({sidebarOpen, openSidebar})=> {
           <div className="header-logo-img">
             <img src={logo} width="70px" />
             <h1>Renta</h1>
-
           </div>
               {/* <a className="active-link" href="#">Home</a>
               <a href="#">About</a>
@@ -41,6 +41,9 @@ const Header = ({sidebarOpen, openSidebar})=> {
               <Link to={"/register"}>
               <i class="fa fa-user" style={{marginRight:'3px'}}></i>
               Register
+              </Link>
+              <Link to={"/Admin"}>
+                  Admin test
               </Link>
               
               
