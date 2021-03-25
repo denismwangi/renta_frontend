@@ -6,6 +6,15 @@ import React, { Component } from 'react'
 import Header from '../../layout/Header';
 
 export class Login extends Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       
+    }
+  }
+  
     render() {
         return (
           
