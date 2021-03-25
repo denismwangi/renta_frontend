@@ -18,7 +18,7 @@ export class HouseList extends Component {
                 <img/>
                 <div className="main-greeting">
                     <div class="input-wrapper">
-                      <input id="stuff" placeholder="Search ........."/>
+                      <input id="stuff" placeholder=""/>
                       <label for="stuff" class="fa fa-search input-icon"></label>
                     </div>
                     <div className="listing">
