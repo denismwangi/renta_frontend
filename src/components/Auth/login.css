@@ -365,7 +365,7 @@ form.sign-in-form {
   } 
 }*/
 
-@media (max-width: 570px) {
+/* @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
   }
@@ -376,7 +376,7 @@ form.sign-in-form {
   .panel .content {
     padding: 0.5rem 1rem;
   }
-  .container {
+  .container-login {
     padding: 1.5rem;
   }
 
@@ -389,4 +389,23 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+} */
+@media (max-width: 978px){
+  .container-login{
+      margin-right:70px;
+      width: 90%;
+  }
+  .panels-container{
+      display: none;
+  }
+  .signin-signup{
+    margin-right: 20px;
+  }
+  .forms-container{
+    margin-right: 45px;
+  }
+  .panels-container{
+    display: none;
+  }
+
 }

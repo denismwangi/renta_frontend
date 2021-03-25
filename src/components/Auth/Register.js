@@ -1,54 +1,82 @@
 import React, { Component } from 'react'
+import reg from './register.svg';
+import log from './log.svg';
+import {Link } from 'react-router-dom'
 
 export class Register extends Component {
     render() {
         return (
             <div>
-                <div className="main-wrapper">
-  <div className="preloader">
-    <div className="lds-ripple">
-      <div className="lds-pos" />
-      <div className="lds-pos" />
-    </div>
-  </div>
-  <div className="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative" style={{background: 'url(assets/images/big/auth-bg.jpg) no-repeat center center'}}>
-    <div className="auth-box row text-center">
-      <div className="col-lg-7 col-md-5 modal-bg-img" style={{backgroundImage: 'url(assets/images/big/3.jpg)'}}>
-      </div>
-      <div className="col-lg-5 col-md-7 bg-white">
-        <div className="p-3">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm14R9mTUcIDzFATDIn7heceVGs3UszEWMiA&usqp=CAU" alt="wrapkit" />
-          <h2 className="mt-3 text-center">Sign Up for Free</h2>
-          <form className="mt-4">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="form-group">
-                  <input className="form-control" type="text" placeholder="your name" />
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="form-group">
-                  <input className="form-control" type="email" placeholder="email address" />
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="form-group">
-                  <input className="form-control" type="password" placeholder="password" />
-                </div>
-              </div>
-              <div className="col-lg-12 text-center">
-                <button type="submit" className="btn btn-block btn-dark">Sign Up</button>
-              </div>
-              <div className="col-lg-12 text-center mt-5">
-                Already have an account? <a href="/Login" className="text-danger">Sign In</a>
-              </div>
-            </div>
-          </form>
+                 <div>
+  <div class="container-login">
+  <div className="forms-container">
+    <div className="signin-signup">
+      <form action="#" className="sign-in-form">
+        <h2 className="title">Sign in</h2>
+        <div className="input-field">
+          <i className="fa fa-user" />
+          <input type="text" placeholder="firstname" />
         </div>
+        <div className="input-field">
+          <i className="fa fa-user" />
+          <input type="text" placeholder="lastname" />
+        </div>
+        <div className="input-field">
+          <i className="fa fa-user" />
+          <input type="text" placeholder="Username" />
+        </div>
+        <div className="input-field">
+          <i className="fa fa-envelope" />
+          <input type="text" placeholder="email" />
+        </div>
+        <div className="input-field">
+          <i className="fa fa-phone" />
+          <input type="text" placeholder="phonenumber" />
+        </div>
+        <div className="input-field">
+          <i className="fa fa-lock" />
+          <input type="password" placeholder="Password" />
+        </div>
+        <input type="submit" defaultValue="Login" className="btn solid" />
+      </form>
+      <form action="#" className="sign-up-form">
+        <h2 className="title">Sign up</h2>
+        <div className="input-field">
+          <i className="fas fa-user" />
+          <input type="text" placeholder="Username" />
+        </div>
+        <div className="input-field">
+          <i className="fas fa-envelope" />
+          <input type="email" placeholder="Email" />
+        </div>
+        <div className="input-field">
+          <i className="fas fa-lock" />
+          <input type="password" placeholder="Password" />
+        </div>
+        <input type="submit" className="btn" name="Sign up" />
+        
+      </form>
+      <Link to={"/login"} style={{textDecoration:'none'}}>
+     <p style={{marginLeft:'180px'}}>
+      Already have account ? Login</p>
+      </Link>
+      
+    </div>
+    
+  </div>
+  <div className="panels-container">
+    <div className="panel left-panel">
+      <div className="content">
+      <img src={log} className="image" alt />
       </div>
+    
+    </div>
+    <div className="panel right-panel">
     </div>
   </div>
 </div>
+</div>
+
 
             </div>
         )

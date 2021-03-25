@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-// import '../assets/css/bootstrap.min.css';
-// import '../assets/css/font-awesome.min.css';
-// import '../assets/style.css';
-// import '../assets/css/font-awesome.min.css';
-// //import '../assets/css/elegant-icons.css';
-// //import '../assets/css/jquery-ui.min.css';
-// import '../assets/css/nice-select.css';
-// //import '../assets/css/owl.carousel.min.css';
-// import '../assets/css/magnific-popup.css';
 import './header.css';
 import logo from '../assets/images/logo.png'
 
@@ -34,11 +25,27 @@ const Header = ({sidebarOpen, openSidebar})=> {
               <a  href="#"><i class="fa fa-user" style={{marginRight:'3px'}}></i>Register</a> */}
           </div>
           <div className="header-right">
-              <a className="active-link" href="#">Home</a>
-              <a href="#">About</a>
-              <a  href="#">Contacts</a>
-              <a  href="#"><i class="fa fa-user" style={{marginRight:'3px'}}></i>login</a>
-              <a  href="#"><i class="fa fa-user" style={{marginRight:'3px'}}></i>Register</a>
+              <Link to={"/"}  className="active-link">
+              Home
+              </Link>
+              <Link to={"/about"}>
+              About
+              </Link>
+              <Link to={"/contacts"}>
+             Contacts
+              </Link>
+              <Link to={"/login"}>
+              <i class="fa fa-user" style={{marginRight:'3px'}}></i>
+              login
+              </Link>
+              <Link to={"/register"}>
+              <i class="fa fa-user" style={{marginRight:'3px'}}></i>
+              Register
+              </Link>
+              
+              
+              
+              
           </div>
 
       </nav>

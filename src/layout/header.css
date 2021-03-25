@@ -57,7 +57,7 @@
 .header-right > a > i{
     color:#a5aaad;
     font-size: 16px;
-
+    text-decoration: none;
     padding: 7px;
     
 }
