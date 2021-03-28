@@ -13,7 +13,23 @@ import { HashRouter } from 'react-router-dom'
 import MainContent from './components/Backend/mainContent/MainContent';
 import MainView from './components/frontend/MainView';
 
-
+const config = {
+  headers: {
+    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+    "Access-Control-Allow-Origin" : "",
+    "Allow": "POST",
+    "Content-type": "Application/json",
+}
+};
+// App.use((req, res, next)=>{
+//   res.setHeader('Access-Control-Allow-Origin', "*");
+//   res.setHeader(
+//     'Access-Control-Allow-Methods',
+//     'OPTIOMS, GET, POST, PUT,PATCH, DELETE'
+//   );
+//   res.setHeader('Access-Control-Allow-headers', 'Content-Type', 'Authorization');
+//   next();
+// });
 
 function App() {
   return (
@@ -28,7 +44,7 @@ function App() {
   
       <Route  exact path="/" component={MainView}/>
       <Route path="/Login" component={Login}/>
-      <Route path="/Register" component={Register}/>
+      <Route  path="/Register" component={Register}/>
       <Route path="#"/>
       <Route path="/Admin" exact component={MainContent}/>
       {/*<Footer/> */}

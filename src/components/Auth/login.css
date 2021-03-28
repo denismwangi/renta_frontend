@@ -58,9 +58,20 @@ form.sign-in-form {
   margin-bottom: 10px;
 }
 
+.container-auth{
+  background: white;
+  width: 500px;
+  margin-left: 600px;
+  border-radius: 15px;
+}
+
 .input-field {
-  max-width: 380px;
-  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  width: 300px;
+  /* max-width: 580px; */
+
   background-color: #f0f0f0;
   margin: 10px 0;
   height: 45px;
@@ -125,7 +136,7 @@ form.sign-in-form {
 }
 
 .btn {
-  width: 400px;
+  width: 310px;
   background-color: #5995fd;
   border: none;
   outline: none;
@@ -221,6 +232,10 @@ form.sign-in-form {
 .right-panel .image,
 .right-panel .content {
   transform: translateX(800px);
+}
+h3{
+  
+  margin-left: 220px;
 }
 
 /* ANIMATION */
@@ -406,6 +421,16 @@ form.sign-in-form {
   }
   .panels-container{
     display: none;
+  }
+  .container-auth{
+    background: white;
+    width: 400px;
+    margin-left: 5%;
+    border-radius: 15px;
+
+  }
+  h3{
+    margin-left: 160px;
   }
 
 }
