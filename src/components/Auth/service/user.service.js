@@ -12,8 +12,8 @@ class UserService{
         return axios.get(API_URL + 'users', {headers: authHeader()});
     }
 
-    getModeratorBoard(){
-        return axios.get(API_URL + 'mod', {headers: authHeader()});
+    getLandlordBoard(){
+        return axios.get(API_URL + 'land', {headers: authHeader()});
     }
 
     getAdminBoard(){

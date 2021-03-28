@@ -28,13 +28,86 @@ export class HouseList extends Component {
                 </div>
             </div>
               <div className="house">
-                <div className="house-left">
+                  <div class="wrapper">
+                  
+                      <div class="box one">
+                      
+                      <div className="house-img">
+                        <img src={bingo}/>
+                      </div>
+                      </div>
+                    
+                      <div class="box two">
+                      <div className="house-leftt">
+                      <div classname="listing">
+                            <h1>Daily Report</h1>
+                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
+                            <h5>Ksh 1.2M</h5>
+                            <p>added 2 mins ago</p>
+                        </div>
+                        <i className="fa fa-usd"></i>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div className="house">
+                  <div class="wrapper">
+                  
+                      <div class="box one">
+                      
+                      <div className="house-img">
+                        <img src={bingo}/>
+                      </div>
+                      </div>
+                    
+                      <div class="box two">
+                      <div className="house-leftt">
+                      <div classname="listing">
+                            <h1>Daily Report</h1>
+                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
+                            <h5>Ksh 1.2M</h5>
+                            <p>added 2 mins ago</p>
+                        </div>
+                        <i className="fa fa-usd"></i>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div className="house">
+                  <div class="wrapper">
+                  
+                      <div class="box one">
+                      
+                      <div className="house-img">
+                        <img src={bingo}/>
+                      </div>
+                      </div>
+                    
+                      <div class="box two">
+                      <div className="house-leftt">
+                      <div classname="listing">
+                            <h1>Daily Report</h1>
+                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
+                            <h5>Ksh 1.2M</h5>
+                            <p>added 2 mins ago</p>
+                        </div>
+                        <i className="fa fa-usd"></i>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+                
+                
+                
+                {/* <div className="house-left">
                   <div className="house-left-title">
-                    <div className="house-img">
+                    <div className="box house-img">
                       <img src={bingo}/>
 
                     </div>
-                      <div>
+                      <div classname="box listing">
                           <h1>Daily Report</h1>
                           <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
                           <h5>Ksh 1.2M</h5>
@@ -94,7 +167,7 @@ export class HouseList extends Component {
                       <i className="fa fa-usd"></i>
                   </div>
                 </div>
-                </div>
+                </div> */}
              
                 
             
@@ -125,8 +198,7 @@ export class HouseList extends Component {
                     </div> 
                 </div> 
         </div>*/}
-          </div>
-     
+          
     </main>
 
 

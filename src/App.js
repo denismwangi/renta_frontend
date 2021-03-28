@@ -12,6 +12,10 @@ import Register from './components/Auth/Register'
 import { HashRouter } from 'react-router-dom'
 import MainContent from './components/Backend/mainContent/MainContent';
 import MainView from './components/frontend/MainView';
+import  BoardAdmin from './components/Backend/mainContent/Board.Admin';
+import BoardUser from './components/Backend/mainContent/Board.User';
+import BoardLand from './components/Backend/mainContent/Board.Land';
+import Profile from './components/Backend/mainContent/Profile';
 
 const config = {
   headers: {
@@ -46,7 +50,14 @@ function App() {
       <Route path="/Login" component={Login}/>
       <Route  path="/Register" component={Register}/>
       <Route path="#"/>
-      <Route path="/Admin" exact component={MainContent}/>
+      <Route  path="/admin" exact component={BoardAdmin} />
+      <Route path="/user" component={BoardUser} />
+      <Route path="/landlord" component={BoardLand}/>
+      <Route exact path="/profile" component={Profile} />
+      
+    
+      {/* <Route path="/Admin" exact component={MainContent}/> */}
+
       {/*<Footer/> */}
       
 

@@ -42,7 +42,7 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 100px;
 }
 .header-right > a{
     margin-right: 30px;
