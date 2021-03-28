@@ -22,7 +22,7 @@ export class HouseList extends Component {
                       <label for="stuff" class="fa fa-search input-icon"></label>
                     </div>
                     <div className="listing">
-                    <h5>All listings</h5>
+                    <h5>All Houses listings</h5>
                     </div>
                     
                 </div>
