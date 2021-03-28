@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
-import reg from './register.svg';
-import log from './log.svg';
-import {Link } from 'react-router-dom'
 import { Container } from 'reactstrap';
-import { Button, Form, FormGroup, Input, Label, Row, Col } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
  import { Alert } from "react-bootstrap"
 
 
 
 import AuthService from './service/auth.service';
-import Header from '../../layout/Header';
 import Footer from '../../layout/Footer';
-import Top from './Top';
+
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 

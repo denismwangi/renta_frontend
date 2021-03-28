@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
  import './login.css'
- import {Link} from 'react-router-dom'
- import log from './log.svg';
- import reg from './register.svg'
-import Header from '../../layout/Header';
 import { Container } from 'reactstrap';
-import { Form, Alert, FormGroup, Input, Label, Row, Col } from "reactstrap";
+import { Form, Alert, FormGroup, Input, Row, Col } from "reactstrap";
 import {Button} from 'react-bootstrap';
 import AuthService from './service/auth.service';
 import Footer from '../../layout/Footer';
