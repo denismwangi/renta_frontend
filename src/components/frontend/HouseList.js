@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import AllHousesService from './service/House.service';
-import SearchSection from '../../components/frontend/SearchSection';
-import WhyUs from '../../components/frontend/WhyUs';
 import './houselist.css'
 import bingo from './bingo.jpg';
 
@@ -22,7 +19,7 @@ export class HouseList extends Component {
                       <label for="stuff" class="fa fa-search input-icon"></label>
                     </div>
                     <div className="listing">
-                    <h5>All Houses listings</h5>
+                    <h5>All Houses listings..</h5>
                     </div>
                     
                 </div>
