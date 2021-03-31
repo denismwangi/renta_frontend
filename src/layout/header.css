@@ -6,9 +6,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 30px 0 30px;
-    border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
     position: fixed;
     width: 100%;
+    box-shadow: 4px 4px 10px #ededed, -5px -5px 13px #ffffff;
    
 }
 .header-logo-img{

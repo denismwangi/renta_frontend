@@ -1,10 +1,11 @@
 main{
-    background: #f3f4f6;
+    background: #fbfbfb;
     grid-area: main;
     overflow-y: auto;
 }
 .main-container{
     padding:20px 35px;
+    margin-left: 50px;
 }
 .main-title{
     display: flex;
@@ -26,10 +27,22 @@ main{
     font-weight: 700;
     color: #a5aaad;
 }
+.house-cont{
+    margin-left: 15px;
+    margin-top: 7px;
+    color: #000000;
+}
+#list{
+    margin-left: 15px;
+    margin-top: 7px;
+  
+}
 .listing{
     font-size: 19px;
     font-weight: 700;
     margin-top: 20px;
+    margin-left: 10px;
+
 }
 .main-cards{
     display: grid;
@@ -59,19 +72,37 @@ main{
 
 .house{
     
-    width: 900px;
+    width: 600px;
     gap: 30px;
     margin-top: 30px;
+    border-radius: 5px;
+    background-color:#fff;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+   
+    
+    
 }
+ 
+.box{
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 700px;
+   
+    
+   
+  }
+
 .house-img{
-    width: 100px;
+    width: 10px;
+    margin-left: 15px;
+    margin-top: 7px;
     
 }
 .house-left{
     padding: 25px;
-    border-radius: 5px;
     background: #ffffff;
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+    
 
 }
 .house-left-title{
@@ -79,42 +110,59 @@ main{
     align-items: center;
     justify-content: space-between;
 }
-.house-left-title > div > h1{
+#list  > h1{
     font-size: 24px;
     color: #2e4a66;
     margin-bottom: 5px;
 
 }
-.house-left-title > div > h4{
+#list> h4{
     font-size: 17px;
     color: #2e4a66;
     margin-bottom: 5px;
 
 }
-.house-left-title > div > h5{
+#list> h5{
     font-size: 14px;
     font-weight: 700;
-    margin-top: 60px;
+   
     color: #2691ED 
     ;
 
 }
-.house-left-title > div > p{
+#list > p{
     font-size: 14px;
     font-weight: 700;
     color: #717e8b;
     margin-left: 00px;
+    margin-bottom: 30px;
 }
-.house-left-title > i{
+.wrapper > i{
     color: #ffffff;
     font-size: 20px;
-    background: #ffc100;
+    background: #9FE2BF;
     border-radius: 200px 0px 200px 200px;
     -moz-border-radius:200px 0px 200px 200px;
     -webkit-border-radius: 200px 0px 200px 200px;
     border: 0px solid #000000;
     padding: 15px;
+    margin-left: 550px;
 }
+.wrapper{
+    margin-bottom: 0px;
+}
+.btn-op > button{
+     width: 100px;
+     color:#fff;
+     background-color: #2691ED;
+     border: none;
+     height: 25px;
+     margin-bottom: 10px;
+     margin-top: 10px;
+     border-radius: 5px;
+     margin-left: 5px;
+}
+
 .chart-right{
     padding: 25px;
     border-radius: 5px;
@@ -135,7 +183,7 @@ main{
   }
   #stuff{
     padding-left: 10px;
-    width: 800px;
+    width: 600px;
     height: 54px;
     border-radius: 25px;
     border: none;
@@ -209,7 +257,7 @@ main{
     font-size: 14px;
 }
 
-@media only screen and (max-width: 400px){
+@media screen and  (max-width: 400px){
     .main-cards{
         grid-template-columns: 1fr;
         gap: 10px;
@@ -220,50 +268,41 @@ main{
         margin-top: 30px;
     }
     .house{
-        width:9%;
+        width:49%;
     }
-    #stuff{
-        width: 100px;
-    }
+    .house-img{
+        width: 90%;
+        }
+    
 }
 
 
-  
-  .box{
-    vertical-align: top;
-    display: inline-block;
-    box-sizing: border-box;
-    height: 170px;
-  }
-  
-  .one {
-    background-color:white;
-    width: 40%;
-  }
-  
-  .two { 
-    background-color: white;
-    width: 60%;
-    /* border:2px dashed #ccc; */
-  }
+ 
   
   @media screen and (max-width: 768px) {
-    .box{
-      display: block;
-      margin-right: 100px;
-    }
-    #stuff{
-        width: 200px;
-    }
+   
+   #stuff{
+      width: 330px;
+   }
   
-    .one {
-      width: 468px;
+   
+     .main{
+         
+        width: 33%;
+    } 
+    
+    .house-left{
+        margin-left: 15px;
+        
     }
-  
-    .two {
-      width: 468px;
+    .house{
+        width:99%;
     }
-    .main-container{
-        width: 468px;
+    .wrapper > i{
+        margin-left: 92%;
     }
+    .house-img{
+    width: 90%;
+    }
+   
   }
