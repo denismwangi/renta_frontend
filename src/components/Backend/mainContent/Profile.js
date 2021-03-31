@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from "react-router-dom";
 import AuthService from '../../Auth/service/auth.service';
+import Sidenav from '../layout/Sidenav';
 import Navbar from '../Navbar/Navbar';
 
 export class Profile extends Component {
@@ -30,8 +31,12 @@ export class Profile extends Component {
 
     return (
       <div>
+        
           <Navbar/>
-  {(this.state.userReady) ?
+         
+        
+         
+  {/* {(this.state.userReady) ?
   <div className="col-lg-8 col-xlg-9 col-md-12">
   
     <h3 classname="text-center" style={{marginTop:'50px'}}>Admin details</h3>
@@ -66,7 +71,31 @@ export class Profile extends Component {
         </form>
       </div>
     </div>
-  </div>: null}
+  </div>: null} */}
+        {(this.state.userReady) ?
+  <div className="house">
+                    <div class="wrapper">
+                    <i className="fa fa-usd"></i>
+                        <div className="house-img">
+                          
+                        </div>
+                        <div classname="h" id="list">
+                          <label>firstname</label>
+                              <h1>{currentUser.firstname}</h1>
+                              <h4>{currentUser.lastname}</h4>
+                              <h5>{currentUser.username}</h5>
+                              <h5>{currentUser.email}</h5>
+                              {currentUser.roles &&
+                                currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
+                              <p>added 2 mins ago</p>
+                          </div><hr></hr>
+                          <div className="btn-op">
+                            <button>Buy</button>
+
+                          </div>
+                    
+                    </div>
+                  </div>: null}
             </div>
         )
     }

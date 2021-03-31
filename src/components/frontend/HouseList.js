@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './houselist.css'
 import bingo from './bingo.jpg';
+import RightSide from '../../layout/Rightside.view';
 
 
 export class HouseList extends Component {
@@ -25,30 +26,30 @@ export class HouseList extends Component {
                 </div>
             </div>
               <div className="house">
-                  <div class="wrapper">
-                  <i className="fa fa-usd"></i>
-                      <div className="house-img">
-                        <img src={bingo}/>
-                      </div>
-                      <div classname="h" id="list">
-                            <h1>Daily Report</h1>
-                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
-                            <h5>Ksh 1.2M</h5>
-                            <p>added 2 mins ago</p>
-                        </div><hr></hr>
-                        <div className="btn-op">
-                          <button>Buy</button>
-
+                    <div class="wrapper">
+                    <i className="fa fa-usd"></i>
+                        <div className="house-img">
+                          <img className="h-img" src={bingo} />
                         </div>
+                        <div classname="h" id="list">
+                              <h1>Daily Report</h1>
+                              <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
+                              <h5>Ksh 1.2M</h5>
+                              <p>added 2 mins ago</p>
+                          </div><hr></hr>
+                          <div className="btn-op">
+                            <button>Buy</button>
+
+                          </div>
                     
                     </div>
                   </div>
                   <div className="house">
                   <div class="wrapper">
                   <i className="fa fa-usd"></i>
-                      <div className="house-img">
-                        <img src={bingo}/>
-                      </div>
+                  <div className="house-img">
+                          <img className="h-img" src={bingo} />
+                        </div>
                       <div classname="h" id="list">
                             <h1>Daily Report</h1>
                             <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
@@ -66,9 +67,9 @@ export class HouseList extends Component {
                   <div className="house">
                   <div class="wrapper">
                   <i className="fa fa-usd"></i>
-                      <div className="house-img">
-                        <img src={bingo}/>
-                      </div>
+                  <div className="house-img">
+                          <img className="h-img" src={bingo} />
+                        </div>
                       <div classname="h" id="list">
                             <h1>Daily Report</h1>
                             <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
@@ -83,24 +84,6 @@ export class HouseList extends Component {
                     
                     </div>
                   </div>
-                  <div className="charts-right-cards">
-                    <div className="card1">
-                        <h1>Income</h1>
-                        <p>$876</p>
-                    </div>
-                    <div className="card2">
-                        <h1>Sales</h1>
-                        <p>$87698</p>
-                    </div>
-                    <div className="card3">
-                        <h1>Users</h1>
-                        <p>900</p>
-                    </div>
-                    <div className="card4">
-                        <h1>Order</h1>
-                        <p>876</p>
-                    </div> 
-                </div>
                
                 </div>
 

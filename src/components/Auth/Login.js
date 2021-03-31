@@ -5,6 +5,7 @@ import { Form, Alert, FormGroup, Input, Row, Col } from "reactstrap";
 import {Button} from 'react-bootstrap';
 import AuthService from './service/auth.service';
 import Footer from '../../layout/Footer';
+import Header from '../../layout/Header';
 
 export class Login extends Component {
 
@@ -30,6 +31,7 @@ export class Login extends Component {
     AuthService.login(this.state.username,this.state.password)
       .then(
         () => {
+          
           this.props.history.push("/profile");
           window.location.reload();
         },
@@ -43,7 +45,7 @@ export class Login extends Component {
   render() {
     return ( 
       <div>
-        
+         <Header/>
         <Container fluid fluid className="container-auth" style={{height:'400px'}}>
           <h3>Sign in</h3>
           <Row style={{marginTop:"0px"}}>

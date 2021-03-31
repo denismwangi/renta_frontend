@@ -94,11 +94,17 @@ main{
   }
 
 .house-img{
-    width: 10px;
+    
     margin-left: 15px;
     margin-top: 7px;
     
+    
 }
+.h-img{
+    width: 500px;
+    border-radius: 3px;
+}
+
 .house-left{
     padding: 25px;
     background: #ffffff;
@@ -163,7 +169,21 @@ main{
      margin-left: 5px;
 }
 
-.chart-right{
+.list-right{
+    padding: 25px;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+
+}
+
+.list-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+    margin-top: 50px;
+}
+.list-left{
     padding: 25px;
     border-radius: 5px;
     background: #ffffff;
@@ -198,18 +218,18 @@ main{
     justify-content: space-around;
 
 }
-.chart-right-title > div > h1{
+.list-right-title > div > h1{
     font-size: 24px;
     color: #2e4a66;
     margin-bottom: 5px;
 
 }
-.chart-right-title > div > p{
+.list-right-title > div > p{
     font-size: 14px;
     font-weight: 700;
     color: #a5aaad;
 }
-.chart-right-title > i{
+.list-right-title > i{
     color: #ffffff;
     font-size: 20px;
     background: #39447a;
@@ -257,6 +277,7 @@ main{
     font-size: 14px;
 }
 
+
 @media screen and  (max-width: 400px){
     .main-cards{
         grid-template-columns: 1fr;
@@ -303,6 +324,9 @@ main{
     }
     .house-img{
     width: 90%;
+    }
+    .h-img{
+        width: 92%;
     }
    
   }

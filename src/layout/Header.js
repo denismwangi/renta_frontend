@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import './header.css';
 import logo from '../assets/images/logo.png'
+import account from '../assets/images/account.png'
 import MainContent from '../components/Backend/mainContent/MainContent';
 import { render } from '@testing-library/react';
 import AuthService from '../components/Auth/service/auth.service';
@@ -78,13 +79,27 @@ class Header extends Component {
               )}
 
                 {currentUser ? (
+                
                     <div header-right>
-                     <Link to={"/profile"} style={{textDecoration:'none', color:'#a5aaad', marginRight:'3px'}} >
-                     {currentUser.firstname}
+                      {/* <div className="header-account-img">
+                        <img src={logo} width="70px" />
+                        <h1>Renta</h1>
+                      </div> */}
+                      
+                        <a href="#">
+                        
+                      </a>
+                           
+                     <Link to={"/profile"} style={{textDecoration:'none', color:'#a5aaad', marginRight:'3px'}}  >
+                     <img src={account} width="30px" />
+                     {currentUser.firstname}  
                    </Link>
-                   <a href="/" onClick={this.logOut} style={{textDecoration:'none', color:'red', marginLeft:'6px'}}>Logout</a>
                    
+                   <a href="/" onClick={this.logOut} style={{textDecoration:'none', color:'red', marginLeft:'6px'}}>Logout</a>
+                  
                  </div>
+                  
+                 
                 ): (
                     <div header-right >
                     <Link to={"/login"} style={{textDecoration:'none', color:'#a5aaad', marginRight:'3px'}}>
@@ -96,6 +111,7 @@ class Header extends Component {
                     Register
                     </Link>
                      </div>
+                     
                 )}
 
           </div>

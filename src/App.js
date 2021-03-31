@@ -47,6 +47,7 @@ function App() {
      
   
       <Route  exact path="/" component={MainView}/>
+      <Route  exact path="/home" component={MainView}/>
       <Route path="/Login" component={Login}/>
       <Route  path="/Register" component={Register}/>
       <Route path="#"/>

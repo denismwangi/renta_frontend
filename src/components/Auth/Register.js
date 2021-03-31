@@ -7,6 +7,7 @@ import { Button, Form, FormGroup, Input } from "reactstrap";
 
 import AuthService from './service/auth.service';
 import Footer from '../../layout/Footer';
+import Header from '../../layout/Header';
 
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
@@ -154,12 +155,14 @@ class Register extends Component {
 
          {/* <Top/> */}
 
-        
+        <Header/>
+
+       
          <Container fluid className="container-auth" style={{height:'550px'}}>
         
               <h3>Sign Up</h3>
               
-            <Form onSubmit={this.signUp} style={{marginTop:'10px'}}>
+            <Form onSubmit={this.signUp} style={{marginTop:'50px'}}>
               <FormGroup controlId="forFirstname" style={{marginTop:'20px'}}>
                 <Input 
                
