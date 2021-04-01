@@ -2,9 +2,31 @@ import React, { Component } from 'react'
 import './houselist.css'
 import bingo from './bingo.jpg';
 import RightSide from '../../layout/Rightside.view';
-
+import AllHousesService from './service/House.service';
+import { withRouter } from 'react-router';
 
 export class HouseList extends Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       houses : []
+    }
+  }
+
+  componentDidMount(){
+    
+    AllHousesService.getHouses().then((res)  =>{
+        this.setState({houses: res.data});
+
+    });
+    
+}
+viewHouse(id){
+  this.props.history.push(`/details/${id}`);
+}
+  
 
   
     render() {
@@ -25,65 +47,33 @@ export class HouseList extends Component {
                     
                 </div>
             </div>
-              <div className="house">
+            {
+              this.state.houses.map(
+                  house =>
+              <div className="house" >
                     <div class="wrapper">
                     <i className="fa fa-usd"></i>
                         <div className="house-img">
-                          <img className="h-img" src={bingo} />
+                          <img className="h-img" src={house.imgurl} />
                         </div>
-                        <div classname="h" id="list">
+                        <div classname="h" id="list" key ={house.id}>
                               <h1>Daily Report</h1>
-                              <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
-                              <h5>Ksh 1.2M</h5>
-                              <p>added 2 mins ago</p>
+                              <h4><i class="fa fa-map-marker" aria-hidden="true"></i>{house.location}</h4>
+                              <h5>{house.price}</h5>
+                              <h5>{house.roomSize}</h5>
+                              <h5>{house.category}</h5>
+                              <p>{house.description}</p>
                           </div><hr></hr>
                           <div className="btn-op">
-                            <button>Buy</button>
-
+                            <button>Buy</button><button onClick= {() => this.viewHouse(house.id)} style={{marginLeft:'100px', borderRadius:'30px'}}>read more</button>
                           </div>
+                          
                     
                     </div>
                   </div>
-                  <div className="house">
-                  <div class="wrapper">
-                  <i className="fa fa-usd"></i>
-                  <div className="house-img">
-                          <img className="h-img" src={bingo} />
-                        </div>
-                      <div classname="h" id="list">
-                            <h1>Daily Report</h1>
-                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
-                            <h5>Ksh 1.2M</h5>
-                            <p>added 2 mins ago</p>
-                           
-                        </div><hr></hr>
-                        <div className="btn-op">
-                          <button>Buy</button>
-
-                        </div>
-                    
-                    </div>
-                  </div>
-                  <div className="house">
-                  <div class="wrapper">
-                  <i className="fa fa-usd"></i>
-                  <div className="house-img">
-                          <img className="h-img" src={bingo} />
-                        </div>
-                      <div classname="h" id="list">
-                            <h1>Daily Report</h1>
-                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Karen</h4>
-                            <h5>Ksh 1.2M</h5>
-                            <p>added 2 mins ago</p>
-                            
-                        </div><hr></hr>
-                        <div className="btn-op">
-                          <button>Buy</button>
-
-                        </div>
-                    
-                    </div>
-                  </div>
+              )}
+                  
+               
                
                 </div>
 
@@ -201,4 +191,4 @@ export class HouseList extends Component {
     }
 }
 
-export default HouseList
+export default withRouter(HouseList)

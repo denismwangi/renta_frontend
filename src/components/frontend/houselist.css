@@ -168,6 +168,17 @@ main{
      border-radius: 5px;
      margin-left: 5px;
 }
+.btn-rd > button{
+    width: 100px;
+    color:#fff;
+    background-color: #2691ED;
+    border: none;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-left: 55px;
+}
 
 .list-right{
     padding: 25px;

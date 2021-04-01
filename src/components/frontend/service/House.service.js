@@ -7,6 +7,9 @@ class AllHousesService{
     getHouses(){
         return axios.get(API_URL);
     }
+    getHouseById(houseId){
+        return axios.get(API_URL + '/' +houseId);
+    }
 
 }
 export default new  AllHousesService;
