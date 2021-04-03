@@ -48,6 +48,8 @@ class Header extends Component {
           <div className="header-left">
           <div className="header-logo-img">
             <img src={logo} width="70px" />
+          
+                   
             <h1>Renta</h1>
           </div>
               {/* <a className="active-link" href="#">Home</a>
@@ -87,17 +89,24 @@ class Header extends Component {
                       </div> */}
                       
                         <a href="#">
-                        
+                       
                       </a>
-                           
-                     <Link to={"/profile"} style={{textDecoration:'none', color:'#a5aaad', marginRight:'3px'}}  >
-                     <img src={account} width="30px" />
+                      
+                      <div header-right >
+                      <div className="header-logo-img">
+                      <img src={account} width="30px" />
+                      <Link to={"/profile"} style={{textDecoration:'none', color:'#a5aaad',marginLeft:'3px', marginRight:'3px'}}  >
+                      
                      {currentUser.firstname}  
                    </Link>
-                   
+                    
                    <a href="/" onClick={this.logOut} style={{textDecoration:'none', color:'red', marginLeft:'6px'}}>Logout</a>
-                  
-                 </div>
+                      </div>
+                      
+                       </div>
+                     
+                   </div>
+               
                   
                  
                 ): (

@@ -35,25 +35,14 @@ const SideView = () =>{
             <div className="sideview-link">
             <a href="#"> Bedsitters Rent</a>
           </div>
-          <div className="sideview-link">
-            <a href="#">Sold Properties</a>
-          </div>
-          <div className="sideview-link">
-            <a href="#">All customers</a>
-          </div>
           <h2>Locations</h2>
           <hr/>
           <div className="sideview-link">
             <a href="#">Nairobi</a>
           </div>
-          <div className="sideview-link">
-          <a href="#">Coast</a>
-          </div>
+          
           <div className="sideview-link">
             <a href="#">Kiambu</a>
-          </div>
-          <div className="sideview-link">
-            <a href="#">Central</a>
           </div>
           <h2>Price</h2>
           <hr/>

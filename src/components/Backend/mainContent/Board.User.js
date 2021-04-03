@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserService from '../../Auth/service/user.service';
+import Sidenav from '../layout/Sidenav';
 import Navbar from '../Navbar/Navbar';
 
 export class BoardUser extends Component {
@@ -41,6 +42,7 @@ export class BoardUser extends Component {
             <header className="jumbotron">
               <h3>{this.state.content}</h3>
             </header>
+            <Sidenav/>
           </div>
           </div>
         );

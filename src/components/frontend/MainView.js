@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import Bottomside from '../../layout/Bottomside';
 import Footer from '../../layout/Footer';
 import Header from '../../layout/Header'
+import RightPanel from '../../layout/RightPanel';
 import SideView from '../../layout/SideView';
+import Sidenav from '../Backend/layout/Sidenav';
+import Main from '../Backend/main/Main';
 import HouseList from './HouseList';
 
 
@@ -22,11 +25,16 @@ const openSidebar = () => {
             <div>
               
 
-              <Header sidebarOpen={sidebarOpen} openSidebar={openSidebar}/>
-              <div className="container">
               <SideView/>
-               <HouseList/>
+             
+              <div className="container">
+                <Header/>
+               
+            <HouseList/>
+            <RightPanel/>
+            
               </div> 
+              
              <div>
              <Footer/>
              </div>

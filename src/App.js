@@ -16,7 +16,9 @@ import  BoardAdmin from './components/Backend/mainContent/Board.Admin';
 import BoardUser from './components/Backend/mainContent/Board.User';
 import BoardLand from './components/Backend/mainContent/Board.Land';
 import Profile from './components/Backend/mainContent/Profile';
-import Details from './components/frontend/Details.Js';
+import Housedetails from './components/frontend/Housedetails';
+
+
 
 const config = {
   headers: {
@@ -46,10 +48,10 @@ function App() {
       
     <div className="App">
      
-  
+       
       <Route  exact path="/" component={MainView}/>
       <Route  exact path="/home" component={MainView}/>
-      <Route path="/details/:id" component={Details}/>
+      <Route path="/property/details/:id" component={Housedetails}/>
       <Route path="/Login" component={Login}/>
       <Route  path="/Register" component={Register}/>
       <Route path="#"/>

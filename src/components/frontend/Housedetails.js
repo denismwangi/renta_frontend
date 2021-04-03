@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import Footer from '../../layout/Footer';
 import Header from '../../layout/Header';
 import AllHousesService from './service/House.service';
 
-export class Details extends Component {
-
+export class Housedetails extends Component {
     constructor(props){
         super(props)
         this.state ={
@@ -14,7 +14,7 @@ export class Details extends Component {
     }
 
     componentDidMount(){
-        AllHouseService.getHouseById(this.state.id).then(res =>{
+        AllHousesService.getHouseById(this.state.id).then(res =>{
             this.setState({
                 house: res.data
             });
@@ -39,7 +39,7 @@ export class Details extends Component {
                     <div class="wrapper">
                     <i className="fa fa-usd"></i>
                         <div className="house-img">
-                          <img className="h-img" src={bingo} />
+                          {/* <img className="h-img" src={bingo} /> */}
                         </div>
                         <div classname="h" id="list">
                               <h1>Daily Report</h1>
@@ -63,9 +63,10 @@ export class Details extends Component {
                 </div>
           
     </main>
+    <Footer/>
             </div>
         )
     }
 }
 
-export default Details
+export default Housedetails;

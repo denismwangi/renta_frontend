@@ -12,6 +12,10 @@
     box-shadow: 4px 4px 10px #ededed, -5px -5px 13px #ffffff;
    
 }
+.how-p{
+    display: inline-block;
+    display: flex;
+}
 .header-logo-img{
     display: flex;
     align-items: center;
