@@ -26,17 +26,18 @@ const openSidebar = () => {
               
 
               <SideView/>
-             
+              <RightPanel/>
               <div className="container">
                 <Header/>
-               
+                
             <HouseList/>
-            <RightPanel/>
+           
+           
             
               </div> 
               
              <div>
-             <Footer/>
+             {/* <Footer/> */}
              </div>
         
               {/* <Sidenav sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/> */}

@@ -36,7 +36,7 @@
     text-decoration: none;
     color: #a5aaad;
     font-size: 15px;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 .navbar-left .active-link{
     color: #265acc;

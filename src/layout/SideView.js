@@ -10,10 +10,10 @@ const SideView = () =>{
         <div className="sidebar-title">
         </div>
         <div className="sidebar-menu">
-          <div className="sidebar-link">
-            <i className="fa fa-sort"></i>
-            <a href="#">Sort by</a>
-            <hr/>
+          <div className="sideview-link">
+            {/* <i className="fa fa-sort"></i>
+            <a href="#">Sort by</a> */}
+            {/* <hr/> */}
           </div>
           <div class="input-sort">
             <input id="sort" placeholder="Sort by"/>

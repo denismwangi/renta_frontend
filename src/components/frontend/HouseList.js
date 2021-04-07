@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './houselist.css'
 import bingo from './bingo.jpg';
 import property from '../../assets/images/property.jpg';
-import RightSide from '../../layout/Rightside.view';
+
 import AllHousesService from './service/House.service';
 import { withRouter } from 'react-router';
 import account from '../../assets/images/account.png';
@@ -79,7 +79,7 @@ viewHouse(id){
                               <p>{house.description}</p>
                           </div>
                           <div className="btn-op">
-                            <button>Buy</button><button onClick= {() => this.viewHouse(house.id)} style={{marginLeft:'100px', borderRadius:'30px'}}>read more</button>
+                            <button onClick= {() => this.viewHouse(house.id)} style={{   borderRadius:'30px'}}>read more</button>
                           </div>
                           
                     

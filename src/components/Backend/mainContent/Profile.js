@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from "react-router-dom";
+import SideView from '../../../layout/SideView';
 import AuthService from '../../Auth/service/auth.service';
 import Sidenav from '../layout/Sidenav';
 import Navbar from '../Navbar/Navbar';
@@ -31,49 +32,11 @@ export class Profile extends Component {
 
     return (
       <div>
-        
+        <SideView/>
           <Navbar/>
-         
-        
-         
-  {/* {(this.state.userReady) ?
-  <div className="col-lg-8 col-xlg-9 col-md-12">
-  
-    <h3 classname="text-center" style={{marginTop:'50px'}}>Admin details</h3>
-    <div className="card" style={{backgroundColor: '#F4F4F4'}}>
-      <div className="card-body">
-        <form className="form-horizontal form-material">
-          <div className="form-group mb-4">
-            <label className="col-md-12 p-0">First name</label>
-            <div className="col-md-12 border-bottom p-0">
-              <h3>{currentUser.firstname}</h3>
-            </div>
-          </div>
-          <div className="form-group mb-4">
-            <label className="col-md-12 p-0">username</label>
-            <div className="col-md-12 border-bottom p-0">
-              <h3>{currentUser.username}</h3>
-            </div>
-          </div>
-          <div className="form-group mb-4">
-            <label className="col-md-12 p-0">email</label>
-            <div className="col-md-12 border-bottom p-0">
-              <h3>{currentUser.email}</h3>
-            </div>
-          </div>
-          <div className="form-group mb-4">
-            <label className="col-md-12 p-0">Admin Authorities</label>
-            <div className="col-md-12 border-bottom p-0">
-              <h3>  {currentUser.roles &&
-            currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}</h3>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>: null} */}
+          
         {(this.state.userReady) ?
-  <div className="house">
+  <div className="house" style={{marginLeft:'350px', marginTop:'20px'}}>
                     <div class="wrapper">
                     <i className="fa fa-usd"></i>
                         <div className="house-img">
@@ -87,10 +50,10 @@ export class Profile extends Component {
                               <h5>{currentUser.email}</h5>
                               {currentUser.roles &&
                                 currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-                              <p>added 2 mins ago</p>
+                            
                           </div><hr></hr>
                           <div className="btn-op">
-                            <button>Buy</button>
+                            <button>Edit Profile</button>
 
                           </div>
                     

@@ -44,8 +44,11 @@ export class Login extends Component {
 
   render() {
     return ( 
+      
       <div>
-         <Header/>
+        <div>
+        <Header/>
+        </div>
         <Container fluid fluid className="container-auth" style={{height:'400px'}}>
           <h3>Sign in</h3>
           <Row style={{marginTop:"0px"}}>
