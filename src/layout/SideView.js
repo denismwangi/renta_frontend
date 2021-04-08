@@ -1,9 +1,12 @@
 import React, { Component, useState } from 'react'
 
+
+
 import './sidenav.css'
 
 
-const SideView = () =>{
+const SideView = (props) =>{
+ 
    
     return (
       <div className="sideview">
@@ -15,8 +18,15 @@ const SideView = () =>{
             <a href="#">Sort by</a> */}
             {/* <hr/> */}
           </div>
+          <div class="input-filter">
+            <input id="sort"
+             placeholder="Type to filter"
+             onChange={props.handleChange}
+             />
+            {/* <label for="sort" class="fa fa-sort input-sort-icon"></label> */}
+          </div>
           <div class="input-sort">
-            <input id="sort" placeholder="filter by"/>
+            <input id="sort" placeholder="Sort By."/>
             <label for="sort" class="fa fa-sort input-sort-icon"></label>
           </div>
          

@@ -24,8 +24,6 @@ const openSidebar = () => {
         return (
             <div>
               
-
-              <SideView/>
               <RightPanel/>
               <div className="container">
                 <Header/>

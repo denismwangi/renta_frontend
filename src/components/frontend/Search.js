@@ -6,7 +6,7 @@ const Search = (props)=> {
              <div class="input-wrapper">
                       <input id="stuff"
                        placeholder="Type Here To Search...."
-                       onChange={props.handleSearch}
+                       onChange={props.handleChange}
                       />
                       <label for="stuff" class="fa fa-search input-icon"></label>
                       

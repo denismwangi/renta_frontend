@@ -7,6 +7,7 @@ import AllHousesService from './service/House.service';
 import { withRouter } from 'react-router';
 import account from '../../assets/images/account.png';
 import Search from './Search'
+import SideView from '../../layout/SideView';
 
 
 
@@ -37,7 +38,9 @@ viewHouse(id){
   this.props.history.push(`property/details/${id}`);
 }
   
-
+handleSearch = (e) =>{
+  this.setState({searchTerm:e.target.value})
+}
 
   
     render() {
@@ -46,15 +49,16 @@ viewHouse(id){
       // const filteredHouses = houses.filter(housesp =>(
       //   housesp.House.toLowerCase().includes(searchTerm.toLowerCase())
       // ))
-        return (      
-      
-        
+        return ( 
+          <div>   
+       
+          <SideView handleChange={this.handleSearch}/>
         <div className="main-p-c">
           <div classname="main-listing">
             <div className="main-h-title">
                 <img/>
                 <div className="main-h-greeting">
-                  <Search handleSearch={(e) => this.setState({searchTerm:e.target.value})}/>
+                  <Search handleChange={this.handleSearch}/>
                     {/* <div class="op-wrapper">
                  
                     <div className="btn-op">
@@ -135,7 +139,7 @@ viewHouse(id){
              
                 </div>
 
-
+</div>
             
         )
     }

@@ -273,7 +273,7 @@ hr{
     width: 590px;
     height: 34px;
     border-radius: 5px;
-    background: #E6F7F8 ;
+    background: #fff;
     border: 1px solid lightgray;
   }
   #stuff:focus{
@@ -284,6 +284,8 @@ hr{
     position: fixed;
     margin-top: 10px;
     margin-bottom: 10px;
+    
+    /* height: 50px; */
   
     
   }
