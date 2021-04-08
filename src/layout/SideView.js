@@ -16,7 +16,7 @@ const SideView = () =>{
             {/* <hr/> */}
           </div>
           <div class="input-sort">
-            <input id="sort" placeholder="Sort by"/>
+            <input id="sort" placeholder="filter by"/>
             <label for="sort" class="fa fa-sort input-sort-icon"></label>
           </div>
          

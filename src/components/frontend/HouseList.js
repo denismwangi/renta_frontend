@@ -6,14 +6,22 @@ import property from '../../assets/images/property.jpg';
 import AllHousesService from './service/House.service';
 import { withRouter } from 'react-router';
 import account from '../../assets/images/account.png';
+import Search from './Search'
+
+
 
 export class HouseList extends Component {
+
+   
+  
 
   constructor(props) {
     super(props)
   
     this.state = {
-       houses : []
+       houses : [],
+       searchTerm :''
+      
     }
   }
 
@@ -30,8 +38,14 @@ viewHouse(id){
 }
   
 
+
   
     render() {
+      const { searchTerm}= this.state;
+      // const message = "Oops Not Found!";
+      // const filteredHouses = houses.filter(housesp =>(
+      //   housesp.House.toLowerCase().includes(searchTerm.toLowerCase())
+      // ))
         return (      
       
         
@@ -40,10 +54,16 @@ viewHouse(id){
             <div className="main-h-title">
                 <img/>
                 <div className="main-h-greeting">
-                    <div class="input-wrapper">
-                      <input id="stuff" placeholder="Type Here To Search...."/>
-                      <label for="stuff" class="fa fa-search input-icon"></label>
-                    </div>
+                  <Search handleSearch={(e) => this.setState({searchTerm:e.target.value})}/>
+                    {/* <div class="op-wrapper">
+                 
+                    <div className="btn-op">
+                            <button>Buy</button>
+                            <button>Hire</button>
+                            <button>Sell</button>
+
+                          </div>
+                    </div> */}
                     <div className="listing">
                     <h5>All Houses listings..</h5>
                     </div>
@@ -52,7 +72,31 @@ viewHouse(id){
             </div>
           
             {
-              this.state.houses.map(
+              this.state.houses.filter((val)=>{
+                if(searchTerm == ""){
+                  return "notfound"
+                
+                }else if(val.location.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val
+
+                }
+                else if(val.price.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val
+
+                }
+                else if(val.roomSize.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val
+
+                }
+                else if(val.category.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val
+
+                }
+                // else{
+                //   return message;
+
+                // }
+              }).map(
                   house =>
               <div className="house" >
                     <div class="wrapper">

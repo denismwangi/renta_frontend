@@ -35,12 +35,44 @@ export class BoardLand extends Component {
       render() {
         return (
             <div>
-                <MainContent/>
-          {/* <div className="container">
+              <div className="sideview">
+        <div className="sidebar-title">
+        </div>
+        <div className="sidebar-menu">
+          <div className="sideview-link">
+            {/* <i className="fa fa-sort"></i>
+            <a href="#">Sort by</a> */}
+            {/* <hr/> */}
+          </div>
+         
+          <h2>Properties</h2>
+          <hr/>
+          <div className="sideview-link">
+            <a href="#">All Properties</a>
+            </div>
+            <div className="sideview-link">
+            <a href="#">Sold Properties</a>
+            </div>
+        
+          <h2>Customers</h2>
+          <hr/>
+          <div className="sideview-link">
+            <a href="#">All Customers</a>
+          </div>
+          
+          <div className="sideview-link">
+            <a href="#">Kiambu</a>
+          </div>
+          </div>
+  
+
+      </div>
+                
+          <div className="container">
             <header className="jumbotron">
               <h3>{this.state.content}</h3>
             </header>
-          </div> */}
+          </div>
           </div>
         );
       }

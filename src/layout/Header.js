@@ -48,17 +48,26 @@ class Header extends Component {
           <div className="header-left">
           <div className="header-logo-img">
             <img src={logo} width="70px" />
-          
+            
                    
             <h1>Renta</h1>
+            
           </div>
+         
               {/* <a className="active-link" href="#">Home</a>
               <a href="#">About</a>
               <a  href="#">Contacts</a>
               <a  href="#"><i class="fa fa-user" style={{marginRight:'3px'}}></i>login</a>
               <a  href="#"><i class="fa fa-user" style={{marginRight:'3px'}}></i>Register</a> */}
+              
           </div>
+          {/* <div class="input-wrapper">
+                      <input id="stuff" placeholder="Type Here To Search...."/>
+                      <label for="stuff" class="fa fa-search input-icon"></label>
+                 </div> */}
+         
           <div className="header-right">
+          
               <Link to={"/"}  className="active-link">
               Home
               </Link>

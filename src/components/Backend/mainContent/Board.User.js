@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import Header from '../../../layout/Header';
 import UserService from '../../Auth/service/user.service';
 import Sidenav from '../layout/Sidenav';
 import Navbar from '../Navbar/Navbar';
+import account from '../../../assets/images/account.png'
+import Main from '../main/Main';
 
 export class BoardUser extends Component {
     constructor(props) {
@@ -36,14 +39,45 @@ export class BoardUser extends Component {
       render() {
         return (
             <div>
-            <Navbar/>
+             
+          <Navbar/>
+         
 
-          <div className="container">
-            <header className="jumbotron">
-              <h3>{this.state.content}</h3>
-            </header>
-            <Sidenav/>
+            <div className="sideview" style={{background:'#8d4de0'}}>
+        <div className="sidebar-title">
+        </div>
+        <div className="sidebar-menu">
+          <div className="sideview-link">
+          <div className="header-logo-img">
+                      <img src={account} width="70px" />
+                      </div>
           </div>
+          <div className="sidebar-link">
+            <i className="fa fa-money"></i>
+            <a href="#">All Transactions</a>
+            </div>
+            <div className="sidebar-link">
+            <i className="fa fa-money"></i>
+            <a href="#">Settings</a>
+          </div>
+            <div className="sidebar-link">
+            <i className="fa fa-money"></i>
+            <a href="#">profile</a>
+          </div>
+          
+          <div className="sidebar-logout" style={{marginTop:'80px'}}>
+            <i className="fa fa-power-off"></i>
+            <a href="#">Logout</a>
+
+          </div>
+          </div>
+  
+
+      </div>
+      <div className="container">
+                <Main/>
+                </div>
+      
           </div>
         );
       }

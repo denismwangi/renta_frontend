@@ -13,7 +13,7 @@ class UserService{
     }
 
     getLandlordBoard(){
-        return axios.get(API_URL + 'land', {headers: authHeader()});
+        return axios.get(API_URL + 'landlord', {headers: authHeader()});
     }
 
     getAdminBoard(){

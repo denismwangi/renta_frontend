@@ -44,9 +44,20 @@
     border-radius: 7px;
     height: 360px;
     margin-right: 95px;
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+    /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
+    border: 1px solid lightgray;
 }
 
+.feat-p h4{
+    margin-left: 20px;
+   
+    padding-top: 35px;
+}
+.feat-p > p {
+    margin-left: 20px;
+   
+    padding-top: 35px;
+}
 @media (max-width: 978px) {
     /* .right-panel {
         display: none;

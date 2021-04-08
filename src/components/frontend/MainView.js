@@ -37,7 +37,7 @@ const openSidebar = () => {
               </div> 
               
              <div>
-             {/* <Footer/> */}
+             <Footer/>
              </div>
         
               {/* <Sidenav sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/> */}

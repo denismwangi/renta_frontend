@@ -34,9 +34,12 @@ export class BoardAdmin extends Component {
     
       render() {
         return (
-        <MainContent/>
-          
-    
+       
+          <div className="container">
+          <header className="jumbotron">
+            <h3>{this.state.content}</h3>
+          </header>
+        </div>
     
         );
       
