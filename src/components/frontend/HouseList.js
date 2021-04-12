@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './houselist.css'
 import bingo from './bingo.jpg';
 import property from '../../assets/images/property.jpg';
-
+import ReactLoading from 'react-loading';
 import AllHousesService from './service/House.service';
 import { withRouter } from 'react-router';
 import account from '../../assets/images/account.png';
@@ -21,7 +21,8 @@ export class HouseList extends Component {
   
     this.state = {
        houses : [],
-       searchTerm :''
+       searchTerm :'',
+       isLoading: true
       
     }
   }
@@ -29,10 +30,16 @@ export class HouseList extends Component {
   componentDidMount(){
     
     AllHousesService.getHouses().then((res)  =>{
-        this.setState({houses: res.data});
+      this.timerHandle = setTimeout(() => this.setState({houses: res.data, isLoading:false}), 3500);
 
     });
     
+}
+componentWillUnmount(){
+  if (this.timerHandle) {
+    clearTimeout(this.timerHandle);
+    this.timerHandle = 0;
+  }
 }
 viewHouse(id){
   this.props.history.push(`property/details/${id}`);
@@ -45,13 +52,15 @@ handleSearch = (e) =>{
   
     render() {
       const { searchTerm}= this.state;
+    
+      
       // const message = "Oops Not Found!";
       // const filteredHouses = houses.filter(housesp =>(
       //   housesp.House.toLowerCase().includes(searchTerm.toLowerCase())
       // ))
         return ( 
           <div>   
-       
+         
           <SideView handleChange={this.handleSearch}/>
         <div className="main-p-c">
           <div classname="main-listing">
@@ -70,12 +79,26 @@ handleSearch = (e) =>{
                     </div> */}
                     <div className="listing">
                     <h5>All Houses listings..</h5>
+                    {/* <ReactLoading type={"bars"} color={"#00E676"} height={'65%'} width={'65%'} /> */}
                     </div>
                     
                 </div>
             </div>
           
+           
+            
+             
+             {/* this.state.isLoading ? <ReactLoading type={"bars"} color={"#00E676"} height={'65%'} width={'65%'} /> */}
+             
             {
+              
+              this.state.isLoading ? <ReactLoading type={"bars"} 
+              color={"#00E676"} 
+              height={'65%'} 
+              width={'65%'} 
+              />
+            :
+            
               this.state.houses.filter((val)=>{
                 if(searchTerm == ""){
                   return "notfound"
@@ -135,9 +158,12 @@ handleSearch = (e) =>{
                   </div>
                    
               )}
+         
+              </div>
+              
               </div>
              
-                </div>
+                
 
 </div>
             

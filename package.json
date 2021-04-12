@@ -8,10 +8,10 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "elegant-icons": "0.0.1",
-   
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
+    "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-validation": "^3.0.7",
@@ -21,7 +21,6 @@
     "validator": "^13.5.2",
     "web-vitals": "^1.1.1"
   },
- 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

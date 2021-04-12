@@ -41,7 +41,6 @@ export class BoardUser extends Component {
             <div>
              
           <Navbar/>
-         
 
             <div className="sideview" style={{background:'#8d4de0'}}>
         <div className="sidebar-title">

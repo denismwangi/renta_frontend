@@ -10,6 +10,7 @@ import BoardUser from './components/Backend/mainContent/Board.User';
 import BoardLand from './components/Backend/mainContent/Board.Land';
 import Profile from './components/Backend/mainContent/Profile';
 import Housedetails from './components/frontend/Housedetails';
+import Preloader from './components/frontend/Preloader';
 
 
 
@@ -43,6 +44,7 @@ function App() {
       <Route path="/user" component={BoardUser} />
       <Route path="/landlord" component={BoardLand}/>
       <Route exact path="/profile" component={Profile} />
+      {/* <Preloader/> */}
 
     </div>
     </Switch>
