@@ -19,7 +19,7 @@
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
      height: 600px; 
-    margin-top: 80px;
+    margin-top: 60px;
     margin-left: 25px;
     position: fixed;
     border-radius: 7px;
@@ -35,17 +35,17 @@
     border-radius: 7px;
     margin-right: 905px;
     height: 200px;
-    border: 1px solid lightgray;
+    border: 1px solid #e8eff6;
 }
 .panel-2{
-    margin-top: 26px;
+    margin-top: 6px;
     background:white ;
     width: 273px;
     border-radius: 7px;
     height: 360px;
     margin-right: 95px;
     /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
-    border: 1px solid lightgray;
+    border: 1px solid #e8eff6;
 }
 
 .feat-p h4{

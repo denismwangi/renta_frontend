@@ -14,7 +14,7 @@
     position: fixed;
     border-radius: 7px;
     /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
-    border: 1px solid lightgray;
+    border: 1px solid #e8eff6;
 
 }
 .bottomview{
@@ -33,7 +33,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #265acc;
+    /* color: #265acc; */
     margin-bottom: 30px;
 
 } 
@@ -58,7 +58,7 @@
     display: none;
 }
 .sidebar-menu > h2{
-    color: #265acc;
+    color: hsl(168, 26%, 4%);
     font-size: 15px;
     margin-top: 15px;
     margin-bottom: 5px;

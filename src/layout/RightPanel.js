@@ -6,9 +6,11 @@ export class RightPanel extends Component {
         return (
             <div>
             <div className="right-panel">
-                    <div className="panel-1">
+                    {/* <div className="panel-1">
                         <img src={houseimage} width="150px" style={{marginLeft:'62px'}}/>
-                    </div> 
+                        <h4>Featured Properties</h4><hr/>
+                        <p>no featured properties at the moment</p>
+                    </div>  */}
                     <div className="panel-2">
                         <div className="feat-p">
                         <h4>Featured Properties</h4><hr/>

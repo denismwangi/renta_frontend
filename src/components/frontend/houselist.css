@@ -124,11 +124,11 @@ hr{
     
     width: 600px;
     gap: 30px;
-     margin-top: 30px;
+     margin-top: 70px;
     border-radius: 5px;
     background-color:#fff;
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
-    border: 1px solid lightgray;
+    /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
+    border: 1px solid #e8eff6;
     
    
     
@@ -170,28 +170,28 @@ hr{
 }
 #list  > h1{
     font-size: 24px;
-    color: #2e4a66;
+    color: #18C4F2 ; 
     margin-bottom: 5px;
 
 }
 #list> h4{
     font-size: 17px;
-    color: #2e4a66;
+   color: #18E4F2; 
     margin-bottom: 5px;
 
 }
 #list> h5{
     font-size: 14px;
     font-weight: 700;
-   
-    color: #2691ED 
+    color: #717e8b; 
+    /* color: #2691ED  */
     ;
 
 }
 #list > p{
     font-size: 14px;
-    font-weight: 700;
-    color: #717e8b;
+     font-weight: 200;
+    color: #717e8b; 
     margin-left: 00px;
     margin-bottom: 30px;
 }
@@ -212,15 +212,22 @@ hr{
    
 }
 .btn-op > button{
-     width: 100px;
-     color:#8d4de0;
-     background-color:#fff;
-     border: 1px solid #8d4de0;
-     height: 25px;
+     width: 200px;
+     /* color:#8d4de0; */
+     background-color:#EAF8F3 ;
+     border: none;
+     height: 45px;
      margin-bottom: 10px;
-     margin-top: 10px;
+     margin-top: 65px;
      border-radius: 5px;
-     margin-left: 5px;
+     margin-left: 65px;
+}
+.btn-op > button:focus{
+    outline: none !important;
+    border:none;
+  }
+.btn-op > button > i{
+    margin-right: 13px;
 }
 .btn-rd > button{
     width: 100px;
@@ -268,17 +275,29 @@ hr{
       margin-top: 70px;
 
   }
+  .loading{
+      margin-top: 200px;
+      margin-left: 200px;
+      /* color: #00E676; 
+              height:65%; 
+              width:65%; */
+              
+              
+
+  }
   #stuff{
     padding-left: 10px;
-    width: 590px;
+    width: 560px;
     height: 34px;
     border-radius: 5px;
-    background: #fff;
-    border: 1px solid lightgray;
+    background: #F4F6F5 ;
+    border:none;
+    margin-left: 10px;
+    
   }
   #stuff:focus{
     outline: none !important;
-    border:1px solid #B9F6CA;
+    border:1px solid #c7c7c7;
   }
   .input-wrapper{
     position: fixed;
@@ -299,8 +318,8 @@ hr{
         border-radius: 5px;
         background-color:#fff;
         box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
-        border: 1px solid lightgray;
-        height: 100px;
+        border: 1px solid #e8eff6;
+        height: 120px;
   }
 .chart-right-title{
     display: flex;
@@ -393,7 +412,7 @@ hr{
   @media screen and (max-width: 768px) {
    
    #stuff{
-      width: 360px;
+      width: 340px;
      
    }
   
@@ -422,6 +441,20 @@ hr{
     }
     .h-img{
         width: 92%;
+    }
+    .loading{
+        height: 30%;
+        width: 30%;
+        margin-left: 80px;
+
+    }
+    .op-wrapper{
+        width: 85%;
+    }
+
+    .btn-op > button{
+        width: 120px;
+        margin-left: 45px;
     }
    
   }

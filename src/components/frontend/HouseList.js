@@ -22,7 +22,13 @@ export class HouseList extends Component {
     this.state = {
        houses : [],
        searchTerm :'',
-       isLoading: true
+       isLoading: true,
+       location: '',
+       category: '',
+       price:'',
+       roomSize:'',
+       description:'',
+       image:''
       
     }
   }
@@ -39,6 +45,19 @@ componentWillUnmount(){
   if (this.timerHandle) {
     clearTimeout(this.timerHandle);
     this.timerHandle = 0;
+  }
+}
+componentDidMount(){
+  AllHousesService.createHouse(
+    this.state.category,
+    this.state.roomSize,
+    this.state.price,
+    this.state.description,
+    this.state.location,
+    this.state.image
+
+  ).then(res) ={
+
   }
 }
 viewHouse(id){
@@ -67,35 +86,29 @@ handleSearch = (e) =>{
             <div className="main-h-title">
                 <img/>
                 <div className="main-h-greeting">
-                  <Search handleChange={this.handleSearch}/>
-                    {/* <div class="op-wrapper">
-                 
+                  
+                    <div class="op-wrapper">
+                    <Search handleChange={this.handleSearch}/>
                     <div className="btn-op">
-                            <button>Buy</button>
-                            <button>Hire</button>
-                            <button>Sell</button>
+                            <button ><i class="fa fa-cart-plus" aria-hidden="true"></i>Buy</button>
+                            <button><i class="fa fa-cart-plus" aria-hidden="true"></i>Sell</button>
 
                           </div>
-                    </div> */}
+                    </div>
                     <div className="listing">
                     <h5>All Houses listings..</h5>
-                    {/* <ReactLoading type={"bars"} color={"#00E676"} height={'65%'} width={'65%'} /> */}
                     </div>
                     
                 </div>
             </div>
-          
-           
-            
-             
-             {/* this.state.isLoading ? <ReactLoading type={"bars"} color={"#00E676"} height={'65%'} width={'65%'} /> */}
-             
             {
               
-              this.state.isLoading ? <ReactLoading type={"bars"} 
+              this.state.isLoading ? <ReactLoading type={"spinningBubbles"} 
               color={"#00E676"} 
-              height={'65%'} 
-              width={'65%'} 
+              height={'35%'} 
+              width={'35%'}
+              // delay={'20'}
+              className="loading"
               />
             :
             
@@ -143,7 +156,7 @@ handleSearch = (e) =>{
                         </div>
                         <div classname="h" id="list" key ={house.id}>
                               {/* <h1>Daily Report</h1> */}
-                              <h4><i class="fa fa-map-marker" aria-hidden="true"></i>{house.location}</h4>
+                              <h4><i class="fa fa-map-marker" aria-hidden="true" style={{marginRight:'5px'}}></i>{house.location}</h4>
                               <h5>{house.price}</h5>
                               <h5>{house.roomSize}</h5>
                               <h5>{house.category}</h5>
