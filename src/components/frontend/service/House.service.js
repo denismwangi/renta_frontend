@@ -10,9 +10,9 @@ class AllHousesService{
     getHouseById(houseId){
         return axios.get(API_URL + '/' +houseId);
     }
-    createHouse(){
-        return axios.post(API_URL + '/' +create);
-    }
+    // createHouse(){
+    //     return axios.post(API_URL + '/' +create);
+    // }
 
 }
 export default new  AllHousesService;

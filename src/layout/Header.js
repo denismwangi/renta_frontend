@@ -6,6 +6,7 @@ import account from '../assets/images/account.png'
 import MainContent from '../components/Backend/mainContent/MainContent';
 import { render } from '@testing-library/react';
 import AuthService from '../components/Auth/service/auth.service';
+import Search from '../components/frontend/Search';
 
 
 class Header extends Component {
@@ -61,10 +62,15 @@ class Header extends Component {
               <a  href="#"><i class="fa fa-user" style={{marginRight:'3px'}}></i>Register</a> */}
               
           </div>
-          {/* <div class="input-wrapper">
-                      <input id="stuff" placeholder="Type Here To Search...."/>
+          
+          <div class="input-wrapper" style={{marginLeft:'340px'}}>
+                      <input id="stuff"
+                       placeholder="Type Here To Search...."
+                       onChange={this.handleChange}
+                      />
                       <label for="stuff" class="fa fa-search input-icon"></label>
-                 </div> */}
+                      
+                 </div>
          
           <div className="header-right">
           

@@ -124,14 +124,11 @@ hr{
     
     width: 600px;
     gap: 30px;
-     margin-top: 70px;
+     margin-top: 12px;
     border-radius: 5px;
     background-color:#fff;
     /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
-    border: 1px solid #e8eff6;
-    
-   
-    
+    border: 1px solid lightgray;  
     
 }
  
@@ -147,14 +144,15 @@ hr{
 
 .house-img{
     
-    margin-left: 15px;
+    margin-left: 0px;
     margin-top: 7px;
     
     
 }
 .h-img{
-    width: 500px;
-    border-radius: 3px;
+    width: 600px;
+    border-radius: 1px;
+    height: 100%;
 }
 
 .house-left{
@@ -218,7 +216,7 @@ hr{
      border: none;
      height: 45px;
      margin-bottom: 10px;
-     margin-top: 65px;
+     margin-top: 35px;
      border-radius: 5px;
      margin-left: 65px;
 }
@@ -310,10 +308,9 @@ hr{
   }
   
     .op-wrapper{
-        position: fixed;
-        margin-top: 100px;
+        /* position: fixed; */
         width: 600px;
-        gap: 30px;
+        gap: 10px;
          margin-top: 10px;
         border-radius: 5px;
         background-color:#fff;

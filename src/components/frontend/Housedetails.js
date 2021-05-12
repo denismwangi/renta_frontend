@@ -39,7 +39,7 @@ export class Housedetails extends Component {
                     <div class="wrapper">
                     <i className="fa fa-usd"></i>
                         <div className="house-img">
-                          {/* <img className="h-img" src={bingo} /> */}
+                          <img className="h-img" src={this.state.house.path} />
                         </div>
                         <div classname="h" id="list">
                               <h1>Daily Report</h1>

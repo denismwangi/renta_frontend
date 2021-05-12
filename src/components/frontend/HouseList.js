@@ -8,6 +8,7 @@ import { withRouter } from 'react-router';
 import account from '../../assets/images/account.png';
 import Search from './Search'
 import SideView from '../../layout/SideView';
+import HouseSkeletons from './HouseSkeletons';
 
 
 
@@ -28,7 +29,7 @@ export class HouseList extends Component {
        price:'',
        roomSize:'',
        description:'',
-       image:''
+       path:''
       
     }
   }
@@ -36,7 +37,7 @@ export class HouseList extends Component {
   componentDidMount(){
     
     AllHousesService.getHouses().then((res)  =>{
-      this.timerHandle = setTimeout(() => this.setState({houses: res.data, isLoading:false}), 3500);
+      this.timerHandle = setTimeout(() => this.setState({houses: res.data, isLoading:false}), 7000);
 
     });
     
@@ -47,19 +48,19 @@ componentWillUnmount(){
     this.timerHandle = 0;
   }
 }
-componentDidMount(){
-  AllHousesService.createHouse(
-    this.state.category,
-    this.state.roomSize,
-    this.state.price,
-    this.state.description,
-    this.state.location,
-    this.state.image
+// componentDidMount(){
+//   AllHousesService.createHouse(
+//     this.state.category,
+//     this.state.roomSize,
+//     this.state.price,
+//     this.state.description,
+//     this.state.location,
+//     this.state.image
 
-  ).then(res) ={
+//   ).then(res) ={
 
-  }
-}
+//   }
+// }
 viewHouse(id){
   this.props.history.push(`property/details/${id}`);
 }
@@ -88,28 +89,30 @@ handleSearch = (e) =>{
                 <div className="main-h-greeting">
                   
                     <div class="op-wrapper">
-                    <Search handleChange={this.handleSearch}/>
+                    {/* <Search handleChange={this.handleSearch}/> */}
                     <div className="btn-op">
                             <button ><i class="fa fa-cart-plus" aria-hidden="true"></i>Buy</button>
                             <button><i class="fa fa-cart-plus" aria-hidden="true"></i>Sell</button>
 
                           </div>
                     </div>
-                    <div className="listing">
+                    {/* <div className="listing">
                     <h5>All Houses listings..</h5>
-                    </div>
+                    </div> */}
                     
                 </div>
             </div>
+            
             {
               
-              this.state.isLoading ? <ReactLoading type={"spinningBubbles"} 
-              color={"#00E676"} 
-              height={'35%'} 
-              width={'35%'}
-              // delay={'20'}
-              className="loading"
-              />
+              // this.state.isLoading ? <ReactLoading type={"spinningBubbles"} 
+              // color={"#00E676"} 
+              // height={'35%'} 
+              // width={'35%'}
+              // // delay={'20'}
+              // className="loading"
+              // />
+              this.state.isLoading ? [1,2,3,4,5,6,7,8,9].map((n) => <HouseSkeletons  />)
             :
             
               this.state.houses.filter((val)=>{
@@ -138,7 +141,9 @@ handleSearch = (e) =>{
                 // }
               }).map(
                   house =>
+                
               <div className="house" >
+
                     <div class="wrapper">
                     {/* <i className="fa fa-usd"></i> */}
                     <div className="ac-oh">
@@ -146,12 +151,12 @@ handleSearch = (e) =>{
                           <div className="ac-h-d">
                           <h2>James B</h2>
                           <p>april 4</p>
-
+  
                           </div>
-                         
-                      </div> <hr/>
+                          
+                      </div> 
                         <div className="house-img">
-                          <img className="h-img" src={property} />
+                          <img className="h-img" src={house.path} />
                         
                         </div>
                         <div classname="h" id="list" key ={house.id}>
@@ -165,6 +170,8 @@ handleSearch = (e) =>{
                           <div className="btn-op">
                             <button onClick= {() => this.viewHouse(house.id)} style={{   borderRadius:'30px'}}>read more</button>
                           </div>
+
+                    
                           
                     
                     </div>
