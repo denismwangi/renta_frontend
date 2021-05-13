@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import './houselist.css'
 import bingo from './bingo.jpg';
 import property from '../../assets/images/property.jpg';
@@ -9,13 +9,14 @@ import account from '../../assets/images/account.png';
 import Search from './Search'
 import SideView from '../../layout/SideView';
 import HouseSkeletons from './HouseSkeletons';
+import BuyModal from './BuyModal';
 
 
 
 export class HouseList extends Component {
 
    
-  
+ 
 
   constructor(props) {
     super(props)
@@ -29,15 +30,26 @@ export class HouseList extends Component {
        price:'',
        roomSize:'',
        description:'',
-       path:''
+       path:'',
+       show: false
       
-    }
+    };
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+    
   }
+  showModal = () =>{
+    this.setState({show:true});
+  };
+  hideModal = () => {
+    this.setState({show:false});
+  };
+
 
   componentDidMount(){
     
     AllHousesService.getHouses().then((res)  =>{
-      this.timerHandle = setTimeout(() => this.setState({houses: res.data, isLoading:false}), 7000);
+      this.timerHandle = setTimeout(() => this.setState({houses: res.data, isLoading:false}), 4000);
 
     });
     
@@ -82,6 +94,7 @@ handleSearch = (e) =>{
           <div>   
          
           <SideView handleChange={this.handleSearch}/>
+         
         <div className="main-p-c">
           <div classname="main-listing">
             <div className="main-h-title">
@@ -90,9 +103,20 @@ handleSearch = (e) =>{
                   
                     <div class="op-wrapper">
                     {/* <Search handleChange={this.handleSearch}/> */}
+                  
+                    <BuyModal show={this.state.show} handleClose={this.hideModal}>
+          <p>Modal</p>
+        </BuyModal>
+        {/* <button type="button" onClick={this.showModal}>
+          Open
+        </button> */}
                     <div className="btn-op">
-                            <button ><i class="fa fa-cart-plus" aria-hidden="true"></i>Buy</button>
-                            <button><i class="fa fa-cart-plus" aria-hidden="true"></i>Sell</button>
+                    <button type="button" onClick={this.showModal}><i class="fa fa-cart-plus" 
+                            aria-hidden="true"></i>
+          Sell
+        </button>
+                            <button><i class="fa fa-cart-plus" 
+                            aria-hidden="true"></i>Sell</button>
 
                           </div>
                     </div>

@@ -6,6 +6,7 @@ import {Button} from 'react-bootstrap';
 import AuthService from './service/auth.service';
 import Footer from '../../layout/Footer';
 import Header from '../../layout/Header';
+import reg from './log.svg';
 
 export class Login extends Component {
 
@@ -46,10 +47,13 @@ export class Login extends Component {
     return ( 
       
       <div>
-        <div>
+        {/* <div>
         <Header/>
-        </div>
-        <Container fluid fluid className="container-auth" style={{height:'400px'}}>
+        </div> */}
+        <div style={{display:'inline-block', display:'flex'}}>
+         <img src={reg} width="400px" style={{marginLeft:'50px'}}/>
+      
+         <Container fluid className="container-auth" style={{height:'450px', marginTop:'70px', marginRight:'1000px'}}>
           <h3>Sign in</h3>
           <Row style={{marginTop:"0px"}}>
           <Col sm="12" md={{ size: 3, offset: 4 }}>
@@ -95,9 +99,10 @@ export class Login extends Component {
             </Col>
           </Row>
         </Container>
-        <div className="footer" style={{marginTop:'100px'}}>
+        {/* <div className="footer" style={{marginTop:'100px'}}>
        <Footer/>
-        </div>
+        </div> */}
+      </div>
       </div>);
   }
 }

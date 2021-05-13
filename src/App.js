@@ -11,6 +11,7 @@ import BoardLand from './components/Backend/mainContent/Board.Land';
 import Profile from './components/Backend/mainContent/Profile';
 import Housedetails from './components/frontend/Housedetails';
 import Preloader from './components/frontend/Preloader';
+import About from './components/pages/About';
 
 
 
@@ -34,7 +35,7 @@ function App() {
       
     <div className="App">
      
-       
+     
       <Route  exact path="/" component={MainView}/>
       <Route  exact path="/home" component={MainView}/>
       <Route path="/property/details/:id" component={Housedetails}/>
@@ -44,6 +45,7 @@ function App() {
       <Route path="/user" component={BoardUser} />
       <Route path="/landlord" component={BoardLand}/>
       <Route exact path="/profile" component={Profile} />
+      <Route exact path="/about" component={About} />
       {/* <Preloader/> */}
 
     </div>

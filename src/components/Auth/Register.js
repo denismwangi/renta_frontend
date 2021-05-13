@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container } from 'reactstrap';
 import { Button, Form, FormGroup, Input } from "reactstrap";
  import { Alert } from "react-bootstrap"
+ import reg from './log.svg';
 
 
 
@@ -155,10 +156,12 @@ class Register extends Component {
 
          {/* <Top/> */}
 
-        <Header/>
+        {/* <Header/> */}
 
-       
-         <Container fluid className="container-auth" style={{height:'550px'}}>
+       <div style={{display:'inline-block', display:'flex'}}>
+         <img src={reg} width="400px" style={{marginLeft:'50px'}}/>
+      
+         <Container fluid className="container-auth" style={{height:'550px', marginTop:'40px', marginRight:'1000px'}}>
         
               <h3>Sign Up</h3>
               
@@ -294,10 +297,11 @@ class Register extends Component {
             
           
             </Container>
-        <div className="footer" style={{marginTop:'100px'}}>
+        {/* <div className="footer" style={{marginTop:'100px'}}>
         <Footer />
-        </div>
+        </div> */}
      
+        </div>
         </div>
       );
   }
