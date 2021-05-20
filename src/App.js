@@ -12,6 +12,8 @@ import Profile from './components/Backend/mainContent/Profile';
 import Housedetails from './components/frontend/Housedetails';
 import Preloader from './components/frontend/Preloader';
 import About from './components/pages/About';
+import MainContent from './components/Backend/mainContent/MainContent';
+import Landing from './components/frontend/Landing';
 
 
 
@@ -36,16 +38,18 @@ function App() {
     <div className="App">
      
      
-      <Route  exact path="/" component={MainView}/>
-      <Route  exact path="/home" component={MainView}/>
+      <Route  exact path="/" component={Landing}/>
+      <Route  exact path="/home" component={Landing}/>
+      <Route  exact path="/feed" component={MainView}/>
       <Route path="/property/details/:id" component={Housedetails}/>
       <Route path="/Login" component={Login}/>
       <Route  path="/Register" component={Register}/>
-      <Route  path="/admin" exact component={BoardAdmin} />
+      <Route  path="/admin" exact component={MainContent} />
       <Route path="/user" component={BoardUser} />
       <Route path="/landlord" component={BoardLand}/>
       <Route exact path="/profile" component={Profile} />
       <Route exact path="/about" component={About} />
+      
       {/* <Preloader/> */}
 
     </div>

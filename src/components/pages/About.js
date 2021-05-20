@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import MapContainer from "../frontend/MapCointainer";
+
 import BuyModal from './BuyModal';
 
 class About extends Component {
@@ -23,17 +25,7 @@ class About extends Component {
 
 render() {
     return (
-      <main>
-        <h1>React Modal</h1>
-        <BuyModal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-        </BuyModal>
-        <button type="button" onClick={this.showModal}>
-          Open
-        </button>
-        
-        
-      </main>
+  <MapContainer/>
     );
   }
 }

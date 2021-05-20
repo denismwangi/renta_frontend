@@ -1,10 +1,12 @@
 #sidebar{
-    background:#32a879;
+    background:#fff;
     grid-area: sidebar;
     overflow-y: auto;
     padding: 20px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+  
+    
 }
 
 .sidebar-title{

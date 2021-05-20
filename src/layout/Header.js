@@ -74,7 +74,7 @@ class Header extends Component {
          
           <div className="header-right">
           
-              <Link to={"/"}  className="active-link">
+              <Link to={"/feed"}  className="active-link">
               Home
               </Link>
               <Link to={"/about"}>

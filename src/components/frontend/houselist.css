@@ -8,6 +8,11 @@ main{
     margin-left: 330px;
     margin-top: 50px;
 }
+.main-c{
+    padding:10px 35px;
+    margin-left: 330px;
+    margin-top: 30px;
+}
 .main-h-title{
     display: flex;
     align-items: center;
@@ -131,6 +136,17 @@ hr{
     border: 1px solid lightgray;  
     
 }
+.house-d-1{
+    
+    width: 700px;
+    gap: 30px;
+     margin-top: 12px;
+    border-radius: 5px;
+    /* background-color:#fff; */
+    /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
+    /* border: 1px solid lightgray;   */
+    
+}
  
 .box{
     vertical-align: top;
@@ -151,6 +167,11 @@ hr{
 }
 .h-img{
     width: 600px;
+    border-radius: 1px;
+    height: 100%;
+}
+.h-img-d{
+    width: 700px;
     border-radius: 1px;
     height: 100%;
 }
@@ -175,13 +196,14 @@ hr{
 #list> h4{
     font-size: 17px;
    color: #18E4F2; 
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
 }
 #list> h5{
     font-size: 14px;
     font-weight: 700;
-    color: #717e8b; 
+    color: #717e8b;
+    margin-bottom: 10px; 
     /* color: #2691ED  */
     ;
 
@@ -209,17 +231,44 @@ hr{
     margin-bottom: 0px;
    
 }
+.btn-sb > button{
+    width: 200px;
+    /* color:#8d4de0; */
+    background-color:#EAF8F3 ;
+    border: none;
+    height: 45px;
+    margin-bottom: 10px;
+    margin-top: 35px;
+    border-radius: 5px;
+    margin-left: 65px;
+}
+
 .btn-op > button{
-     width: 200px;
+     width: 100px;
      /* color:#8d4de0; */
-     background-color:#EAF8F3 ;
+     background-color:#fff ;
      border: none;
      height: 45px;
      margin-bottom: 10px;
-     margin-top: 35px;
+     margin-top: 7px;
      border-radius: 5px;
-     margin-left: 65px;
+     margin-left: 15px;
 }
+.btn-op > button:hover {
+    background-color: #f0f0f0; /* Green */
+    color: black;
+  }
+.btn-p > button{
+    width: 273px;
+    /* color:#8d4de0; */
+    background-color:#2abe8a ;
+    border: none;
+    height: 45px;
+    margin-bottom: 10px;
+    margin-top: 35px;
+    border-radius: 5px;
+}
+
 .btn-op > button:focus{
     outline: none !important;
     border:none;
