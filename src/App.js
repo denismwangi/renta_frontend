@@ -14,6 +14,7 @@ import Preloader from './components/frontend/Preloader';
 import About from './components/pages/About';
 import MainContent from './components/Backend/mainContent/MainContent';
 import Landing from './components/frontend/Landing';
+import ListUsers from './components/Backend/views/ListUsers';
 
 
 
@@ -45,10 +46,13 @@ function App() {
       <Route path="/Login" component={Login}/>
       <Route  path="/Register" component={Register}/>
       <Route  path="/admin" exact component={MainContent} />
+      <Route  path="/admin/dashboard" exact component={MainContent} />
       <Route path="/user" component={BoardUser} />
       <Route path="/landlord" component={BoardLand}/>
       <Route exact path="/profile" component={Profile} />
       <Route exact path="/about" component={About} />
+      <Route exact path="/admin/users/" component={ListUsers}/>
+     
       
       {/* <Preloader/> */}
 

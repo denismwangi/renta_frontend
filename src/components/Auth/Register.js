@@ -29,8 +29,8 @@ class Register extends Component {
       firstname: "",
       lastname: "",
       username: "",
-      contacts: "",
       email: "",
+      phone: "",
       password: "",
       message: "",
       successful: false,
@@ -39,8 +39,8 @@ class Register extends Component {
         firstname: '',
         lastname: '',
         username: '',
-        contacts: '',
         email: '',
+        phone: '',
         password: ''
       }
     };
@@ -76,8 +76,8 @@ class Register extends Component {
             ? ''
             : 'email is not valid!';
         break;
-        case 'contacts':
-        errors.contacts = 
+        case 'phone':
+        errors.phone = 
           value.length < 10
             ? 'phone no must be 10 characters long!'
             : '';
@@ -107,8 +107,8 @@ class Register extends Component {
         this.state.firstname,
         this.state.lastname,
         this.state.username,
-        this.state.contacts,
         this.state.email,
+        this.state.phone,
         this.state.password
       ).then(
         () => {
@@ -247,15 +247,15 @@ class Register extends Component {
                 className="input-field"
                   type="text" 
                   placeholder="Enter phonenumber"
-                  name="contacts" id="contacts"
-                  value={this.state.contacts}
-                  autoComplete="contacts"
+                  name="phone" id="phone"
+                  value={this.state.phone}
+                  autoComplete="phone"
                   onChange={this.changeHandler}
                 />
                 {
-                  errors.contacts && ( 
+                  errors.phone && ( 
                     <Alert variant="danger" style={{color:'red'}}>
-                        {errors.contacts}
+                        {errors.phone}
                       </Alert>
                     )
                 }

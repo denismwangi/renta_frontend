@@ -21,17 +21,17 @@ const Sidenav = ({sidebarOpen,closeSidebar }) =>{
         <div className="sidebar-menu">
           <div className="sidebar-link active-menu-link">
             <i className="fa fa-home"></i>
-            <a href="#">Dashboard</a>
+            <a href="/admin/dashboard">Dashboard</a>
           </div>
           <h2>Properties</h2>
           <div className="sidebar-link">
-            <i className="fa fa-building"></i>
-            <a href="#">All Properties</a>
+            <i className="fa fa-users"></i>
+            <a href="/admin/users">Users</a>
 
           </div>
           <div className="sidebar-link">
             <i className="fa fa-building-o"></i>
-            <a href="#">Sold Properties</a>
+            <a href="#">Properties</a>
 
           </div>
           <h2>Customers</h2>

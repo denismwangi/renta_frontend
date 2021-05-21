@@ -1,5 +1,6 @@
 #sidebar{
-    background:#fff;
+    /* background:#8d4de0; */
+    background: #fff;
     grid-area: sidebar;
     overflow-y: auto;
     padding: 20px;

@@ -19,14 +19,15 @@ class AuthService {
             return response.data;
           });
       }
-    register(firstname, lastname,username, email,  password, contacts){
+    register(firstname, lastname,username, email,phone,  password ){
         return axios.post(API_URL + "signup", {
             firstname,
             lastname,
             username,
             email,
-            password,
-            contacts
+            phone,
+            password
+          
         })
         .then(response =>{
             if(response.data.accessToken){
