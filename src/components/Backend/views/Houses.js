@@ -3,34 +3,27 @@ import Sidenav from '../layout/Sidenav';
 import Navbar from '../Navbar/Navbar'
 import { withRouter } from 'react-router';
 import './user.css';
-
-import AllUsersService from './UsersService';
+import ReactLoading from 'react-loading';
+import AllHousesService from '../../frontend/service/House.service';
+import HouuseSkeletons from '../../frontend/HouseSkeletons';
 import Skeletons from './Skeletons';
 
-class ListUsers extends Component {
+
+class Houses extends Component {
     
     constructor(props){
         super(props)
         this.state = {
-            users: [],
+            houses: [],
             isLoading: true
-
         }
      
     }
     
-    deleteUser(id){
-        AllUsersService.deleteUser(id).then(res =>{
-            this.setState({
-                users: this.state.users.filter(user => user.id != id)
-            });
-        });
-        
-    }
     componentDidMount(){
     
-        AllUsersService.getUsers().then((res)  =>{
-          this.timerHandle = setTimeout(() => this.setState({users: res.data, isLoading:false}), 4000);
+        AllHousesService.getHouses().then((res)  =>{
+          this.timerHandle = setTimeout(() => this.setState({houses: res.data, isLoading:false}), 4000);
     
         });
         
@@ -41,16 +34,19 @@ class ListUsers extends Component {
         this.timerHandle = 0;
       }
     }
-    viewUser(id){
-        this.props.history.push(`/admin/users/view_user/${id}`);
-    }
+    viewHouse(id){
+        this.props.history.push(`property/details/${id}`);
+      }
 
+    
     render() {
         return (
+            
             <div className="container">
+            
             <Navbar/>
             <main>
-            <div className="main-container" style={{marginTop:'50px', height:'100%'}}>
+            <div className="main-container" style={{marginTop:'50px'}}>
             <div className="main-cards">
                 <div className="card"> 
                 <div className="icon">
@@ -91,35 +87,45 @@ class ListUsers extends Component {
           <table>
               <thead>
   <tr>
-    <th>firstname</th>
-    <th>lastname</th>
-    <th>username</th>
-    <th>email</th>
-    <th>pnone</th>
-    <th>No of Houses</th>
+    <th>House Size</th>
+    <th>Location</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>House Image</th>
+    <th>State</th>
     <th>Action</th>
     
    
   </tr>
   </thead>
- 
+  
+
   {
-       this.state.isLoading ? [1,2,3].map((n) => <tr><td> <Skeletons  /> </td></tr>)
+     
+        //    this.state.isLoading ? <ReactLoading type={"spinningBubbles"} 
+        //       color={"#00E676"} 
+        //       height={'15%'} 
+        //       width={'15%'}
+        //       // delay={'20'}
+        //       className="loading"
+        //       />
+             
+        this.state.isLoading ? [1,2,3,3,4,5,6,7].map((n) => <tr><td> <Skeletons  /> </td></tr>)
        
         
        :
-                                this.state.users.map(
-                                    user =>
-                                    <tr key ={user.id}>
-                                        <td>{user.firstname}</td>
-                                        <td>{user.lastname}</td>
-                                        <td>{user.username}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.phone}</td>
-                                        <td>null</td>
+                                this.state.houses.map(
+                                    house =>
+                                    <tr key ={house.id}>
+                                        <td>{house.roomSize}</td>
+                                        <td>{house.location}</td>
+                                        <td>{house.price}</td>
+                                        <td>{house.category}</td>
+                                        <td><img className="h-img" src={house.path} style={{width:'90px', height:'40px'}}/></td>
+                                        <td>Active</td>
                                         <td>
-                                        <button onClick= {() => this.viewUser(user.id)} className="btn-info" style={{marginLeft: '10px'}}>View</button>
-                                            <button onClick= {() => this.deleteUser(user.id)} className="btn-danger" style={{marginLeft: '10px'}}>Delete</button>
+                                        <button onClick= {() => this.viewHouse(house.id)} className="btn-info" style={{marginLeft: '10px'}}>View</button>
+                                            <button  className="btn-danger" style={{marginLeft: '10px'}}>Delete</button>
                                         </td>
                                         </tr>
                                         )
@@ -139,4 +145,4 @@ class ListUsers extends Component {
     }
 }
 
-export default ListUsers;
+export default Houses;

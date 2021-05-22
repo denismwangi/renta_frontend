@@ -15,17 +15,12 @@ import About from './components/pages/About';
 import MainContent from './components/Backend/mainContent/MainContent';
 import Landing from './components/frontend/Landing';
 import ListUsers from './components/Backend/views/ListUsers';
+import Houses from './components/Backend/views/Houses';
+import Sales from './components/Backend/views/Sales';
+import Cancelled from './components/Backend/views/Cancelled';
+import Pending from './components/Backend/views/Pending';
+import Chats from './components/Backend/views/Chats';
 
-
-
-const config = {
-  headers: {
-    'Authorization': `Bearer ${localStorage.getItem('token')}`,
-    "Access-Control-Allow-Origin" : "",
-    "Allow": "POST",
-    "Content-type": "Application/json",
-}
-};
 
 
 function App() {
@@ -51,7 +46,20 @@ function App() {
       <Route path="/landlord" component={BoardLand}/>
       <Route exact path="/profile" component={Profile} />
       <Route exact path="/about" component={About} />
-      <Route exact path="/admin/users/" component={ListUsers}/>
+      <Route exact activeClassName="active" path="/admin/users/" component={ListUsers}/>
+      <Route exact activeClassName="active" path="/admin/properties/" component={Houses}/>
+      <Route exact path="/admin/sales" component={Sales}/>
+      <Route exact path="/admin/cancelled" component={Cancelled}/>
+      <Route exact path="/admin/pending" component={Pending}/>
+      <Route exact path="/admin/sold" component={Sales}/>
+     <Route exact path="/admin/chat" component={Chats}/>
+      
+      
+      
+      
+     
+      
+     
      
       
       {/* <Preloader/> */}

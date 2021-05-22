@@ -3,34 +3,27 @@ import Sidenav from '../layout/Sidenav';
 import Navbar from '../Navbar/Navbar'
 import { withRouter } from 'react-router';
 import './user.css';
-
-import AllUsersService from './UsersService';
+import ReactLoading from 'react-loading';
+import AllHousesService from '../../frontend/service/House.service';
+import HouuseSkeletons from '../../frontend/HouseSkeletons';
 import Skeletons from './Skeletons';
 
-class ListUsers extends Component {
+
+class Pending extends Component {
     
     constructor(props){
         super(props)
         this.state = {
-            users: [],
+            houses: [],
             isLoading: true
-
         }
      
     }
     
-    deleteUser(id){
-        AllUsersService.deleteUser(id).then(res =>{
-            this.setState({
-                users: this.state.users.filter(user => user.id != id)
-            });
-        });
-        
-    }
     componentDidMount(){
     
-        AllUsersService.getUsers().then((res)  =>{
-          this.timerHandle = setTimeout(() => this.setState({users: res.data, isLoading:false}), 4000);
+        AllHousesService.getHouses().then((res)  =>{
+          this.timerHandle = setTimeout(() => this.setState({houses: res.data, isLoading:false}), 4000);
     
         });
         
@@ -41,16 +34,19 @@ class ListUsers extends Component {
         this.timerHandle = 0;
       }
     }
-    viewUser(id){
-        this.props.history.push(`/admin/users/view_user/${id}`);
-    }
+    viewHouse(id){
+        this.props.history.push(`property/details/${id}`);
+      }
 
+    
     render() {
         return (
+            
             <div className="container">
+            
             <Navbar/>
             <main>
-            <div className="main-container" style={{marginTop:'50px', height:'100%'}}>
+            <div className="main-container" style={{marginTop:'50px'}}>
             <div className="main-cards">
                 <div className="card"> 
                 <div className="icon">
@@ -91,39 +87,19 @@ class ListUsers extends Component {
           <table>
               <thead>
   <tr>
-    <th>firstname</th>
-    <th>lastname</th>
-    <th>username</th>
-    <th>email</th>
-    <th>pnone</th>
-    <th>No of Houses</th>
+    <th>House Size</th>
+    <th>Location</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>House Image</th>
+    <th>State</th>
     <th>Action</th>
     
    
   </tr>
   </thead>
- 
-  {
-       this.state.isLoading ? [1,2,3].map((n) => <tr><td> <Skeletons  /> </td></tr>)
-       
-        
-       :
-                                this.state.users.map(
-                                    user =>
-                                    <tr key ={user.id}>
-                                        <td>{user.firstname}</td>
-                                        <td>{user.lastname}</td>
-                                        <td>{user.username}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.phone}</td>
-                                        <td>null</td>
-                                        <td>
-                                        <button onClick= {() => this.viewUser(user.id)} className="btn-info" style={{marginLeft: '10px'}}>View</button>
-                                            <button onClick= {() => this.deleteUser(user.id)} className="btn-danger" style={{marginLeft: '10px'}}>Delete</button>
-                                        </td>
-                                        </tr>
-                                        )
-  }
+  
+
 
 </table>
         
@@ -139,4 +115,4 @@ class ListUsers extends Component {
     }
 }
 
-export default ListUsers;
+export default Pending;

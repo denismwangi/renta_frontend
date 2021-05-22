@@ -18,7 +18,7 @@
     return(
         <div style={{marginTop: "15px"}}>
 
-            <XYPlot height={300} width={300}>
+            <XYPlot height={300} width={800}>
             <VerticalGridLines/>
             <HorizontalGridLines/>
             <XAxis/>

@@ -2,6 +2,7 @@ main{
     background: #f8fafd;
     grid-area: main;
     overflow-y: auto;
+    margin-left: 130px;
 }
 .main-container{
     padding:20px 35px;
@@ -38,7 +39,7 @@ main{
     padding: 25px;
     border-radius: 5px;
     background: #ffffff;
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+    /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
 }
 
 
@@ -62,7 +63,7 @@ main{
     padding: 25px;
     border-radius: 5px;
     background: #ffffff;
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+    /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
 
 }
 .charts-left-title{
@@ -95,7 +96,7 @@ main{
     padding: 25px;
     border-radius: 5px;
     background: #ffffff;
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+    /* box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff; */
 
 }
 .chart-right-title{

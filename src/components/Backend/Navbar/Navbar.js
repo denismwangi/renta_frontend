@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import UserService from '../../Auth/service/user.service';
 import AuthService from '../../Auth/service/auth.service';
 import { Link } from 'react-router-dom';
+import Houses from '../views/Houses';
 
 
 //const Navbar = ({sidebarOpen, openSidebar})=> {
@@ -45,12 +46,18 @@ class Navbar extends Component {
                 <i className="fa fa-bars"></i>
             </div>
             <div className="navbar-left">
-                <a href="#">users</a>
-                <a>
+            <i className="fa fa-bell" style={{marginLeft:'10px'}}> Notifications</i>
+            <i className="fa fa-cog" style={{marginLeft:'40px'}}> Settings</i>
+        
+            </div>
+          
+           
+            <div>
+                {/* <a>
                 <Link to={"/"} >
                     Home
                 </Link>
-                </a>
+                </a> */}
                 {showAdminBoard && (
                     <a>
                     <Link to={"/land"}>Landlord</Link>
@@ -71,13 +78,13 @@ class Navbar extends Component {
             <div className="navbar-right">
             {currentUser ? (
                     <div navbar-right>
-                        
-                    <Link to={"/profile"}>
-                     welcome   {currentUser.firstname}
+                        <b>Hello</b>
+                    <Link to={"/profile"} style={{textDecoration:'none' , fontSize:'20px', marginLeft:'10px'}}>
+                   <b>  {currentUser.firstname} </b>
                     </Link>
                    
 
-                     <a href="/login" onClick={this.logout}>logout</a>
+                     {/* <a href="/login" onClick={this.logout}>logout</a> */}
                 </div>
                 ):(
                     <a>test</a>

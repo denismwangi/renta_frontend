@@ -1,11 +1,13 @@
 .navbar{
     background:#ffffff ;
-    grid-area: nav;
-    height:60px;
+   width: 84%;
+    height:70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px 0 30px;
+    margin-left: 220px;
+    position: fixed;
     /* border-bottom: 1px solid lightgray; */
    
 }

@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import logo from '../../../assets/images/logo.png'
 import './side.css'
+import { NavLink } from 'react-router-dom';
 
 
 const Sidenav = ({sidebarOpen,closeSidebar }) =>{
@@ -19,49 +20,75 @@ const Sidenav = ({sidebarOpen,closeSidebar }) =>{
           </i>
         </div>
         <div className="sidebar-menu">
-          <div className="sidebar-link active-menu-link">
-            <i className="fa fa-home"></i>
-            <a href="/admin/dashboard">Dashboard</a>
+        <div className="sidebar-link">
+            <a><NavLink activeClassName="active" to='/admin/dashboard'>
+              <i className="fa fa-home" style={{marginRight:'7px'}}></i>
+              Dashboard
+              </NavLink>
+              </a>
+      </div>
+
+          <h2>Users</h2>
+          <div className="sidebar-link">
+          <a><NavLink activeClassName="active" to='/admin/users'>
+              <i className="fa fa-users" style={{marginRight:'7px'}}></i>
+              Users
+              </NavLink>
+              </a>
+          </div>
+          <div className="sidebar-link">
+          <a><NavLink activeClassName="active" to='/admin/chat'>
+              <i className="fa fa-comments" style={{marginRight:'7px'}}></i>
+              Chats
+              </NavLink>
+              </a>
+
           </div>
           <h2>Properties</h2>
           <div className="sidebar-link">
-            <i className="fa fa-users"></i>
-            <a href="/admin/users">Users</a>
+          <a>
+            <NavLink activeClassName="active" to='/admin/properties'>
+              <i className="fa fa-building-o" style={{marginRight:'7px'}}></i>
+            All Properties
+              </NavLink>
+              </a>
+
+          </div>
+
+          <div className="sidebar-link">
+          <a><NavLink activeClassName="active" to='/admin/sold'>
+              <i className="fa fa-money" style={{marginRight:'7px'}}></i>
+              Sold Properties
+              </NavLink>
+              </a>
+
+
+          </div>
+          <h2>Sales</h2>
+          <div className="sidebar-link">
+          <a><NavLink activeClassName="active" to='/admin/sales'>
+              <i className="fa fa-money" style={{marginRight:'7px'}}></i>
+              All Sales
+              </NavLink>
+              </a>
 
           </div>
           <div className="sidebar-link">
-            <i className="fa fa-building-o"></i>
-            <a href="#">Properties</a>
-
-          </div>
-          <h2>Customers</h2>
-          <div className="sidebar-link">
-            <i className="fa fa-user"></i>
-            <a href="#">All customers</a>
-
-          </div>
-          <h2>Transactions</h2>
-          <div className="sidebar-link">
-            <i className="fa fa-money"></i>
-            <a href="#">All Transactions</a>
-
+          <a><NavLink activeClassName="active" to='/admin/pending'>
+              <i className="fa fa-money" style={{marginRight:'7px'}}></i>
+              Pending Sales
+              </NavLink>
+              </a>
           </div>
           <div className="sidebar-link">
-            <i className="fa fa-money"></i>
-            <a href="#">All Transactions</a>
-
-          </div>
-          <div className="sidebar-link">
-            <i className="fa fa-money"></i>
-            <a href="#">All Transactions</a>
+          <a><NavLink activeClassName="active" to='/admin/cancelled'>
+              <i className="fa fa-money" style={{marginRight:'7px'}}></i>
+             Cancelled Sales
+              </NavLink>
+              </a>
             
           </div>
-          <h2>Transactions</h2>
-          <div className="sidebar-link">
-            <i className="fa fa-money"></i>
-            <a href="#">All Transactions</a>
-
-          </div>
+         
           <div className="sidebar-logout">
             <i className="fa fa-power-off"></i>
             <a href="#">Logout</a>
