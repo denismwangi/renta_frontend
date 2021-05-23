@@ -132,7 +132,7 @@ const BuyModal = ({ handleClose, show, children }) => {
               onChange={(e) => setFile(e.target.files[0])}
               />
   </div>
-  <Button type="submit" onClick={uploadWithFormData}  >
+  <Button type="submit" onClick={uploadWithFormData}   className="modal-btn">
                 Submit
               </Button>
  

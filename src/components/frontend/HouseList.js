@@ -189,7 +189,7 @@ handleSearch = (e) =>{
                         <div classname="h" id="list" key ={house.id}>
                               {/* <h1>Daily Report</h1> */}
                               <h4><i class="fa fa-map-marker" aria-hidden="true" style={{marginRight:'5px'}}></i>{house.location}</h4>
-                              <h5><i class="fa fa-dollar" aria-hidden="true" style={{marginRight:'5px'}}></i>KES {house.price}</h5>
+                              <h5 className="h-d"><i class="fa fa-dollar" aria-hidden="true" style={{marginRight:'5px'}}></i>KES {house.price}</h5>
                               <h5><i class="fa fa-bed" aria-hidden="true" style={{marginRight:'5px'}}></i>{house.roomSize}</h5>
                               <h5><i class="fa fa-edit" aria-hidden="true" style={{marginRight:'5px'}}></i>{house.category}</h5>
                               {/* <p><i class="fa fa-map-marker" aria-hidden="true" style={{marginRight:'5px'}}></i>{house.description}</p> */}

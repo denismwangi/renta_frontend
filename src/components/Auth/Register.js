@@ -159,13 +159,13 @@ class Register extends Component {
         {/* <Header/> */}
 
        <div style={{display:'inline-block', display:'flex'}}>
-         <img src={reg} width="400px" style={{marginLeft:'50px'}}/>
+         {/* <img src={reg} width="400px" style={{marginLeft:'50px'}}/> */}
       
-         <Container fluid className="container-auth" style={{height:'550px', marginTop:'40px', marginRight:'1000px'}}>
+         <Container fluid className="container-auth" style={{height:'570px', marginTop:'40px', marginRight:'1000px'}}>
         
-              <h3>Sign Up</h3>
+              <h3 className="h-3">Sign Up</h3>
               
-            <Form onSubmit={this.signUp} style={{marginTop:'50px'}}>
+            <Form onSubmit={this.signUp} style={{marginTop:'10px'}}>
               <FormGroup controlId="forFirstname" style={{marginTop:'20px'}}>
                 <Input 
                
@@ -295,7 +295,7 @@ class Register extends Component {
               {alert}
             </Form>
             
-          
+          <h5 className="h-5">Already have account? <a href="/login" style={{color:'#4481eb'}}>login</a></h5>
             </Container>
         {/* <div className="footer" style={{marginTop:'100px'}}>
         <Footer />

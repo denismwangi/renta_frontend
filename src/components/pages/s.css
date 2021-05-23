@@ -51,8 +51,29 @@
   width: 100%;
 }
 .input:focus{
-  color: palevioletred;
+  outline: none !important;
+  border:1px solid #B9F6CA;
 }
+.modal-btn {
+  width: 400px;
+  /* background-color: #5995fd; */
+  background-color:#2abe8a ;
+  border: none;
+  outline: none;
+  height: 39px;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #4d84e2;
+}
+
   
 
   

@@ -33,7 +33,7 @@ export class Login extends Component {
       .then(
         () => {
           
-          this.props.history.push("/profile");
+          this.props.history.push("/feed");
           window.location.reload();
         },
         error => {
@@ -50,11 +50,15 @@ export class Login extends Component {
         {/* <div>
         <Header/>
         </div> */}
-        <div style={{display:'inline-block', display:'flex'}}>
-         <img src={reg} width="400px" style={{marginLeft:'50px'}}/>
+        <div style={{ display:'flex'}} className="landing-p">
+         {/* <img src={reg}  className="des"/> */}
       
-         <Container fluid className="container-auth" style={{height:'450px', marginTop:'70px', marginRight:'1000px'}}>
-          <h3>Sign in</h3>
+         <Container fluid className="container-auth" style={{height:'470px', marginTop:'80px', marginRight:'1000px'}}>
+        
+        <h2 className="h-2">Sign In</h2>
+        <h4 className="h-4">Login to your account to continue</h4>
+        
+         
           <Row style={{marginTop:"0px"}}>
           <Col sm="12" md={{ size: 3, offset: 4 }}>
             <div style={{marginBottom: "0px"}}>
@@ -63,6 +67,7 @@ export class Login extends Component {
             </div>
             <Form  onSubmit={this.doLogin} style={{marginTop:'0px'}}>
               <FormGroup style={{marginTop:'80px'}}>
+                <label>Username</label>
                 <Input autoFocus 
                 className="input-field"
                   type="text"
@@ -75,6 +80,7 @@ export class Login extends Component {
               </FormGroup>
 
               <FormGroup>
+                <label>Password</label>
                 <Input type="password" 
                 className="input-field"
                   name="password" id="password"
@@ -96,6 +102,7 @@ export class Login extends Component {
                 )
               }
             </Form>
+            <h5 className="h-5">Not yet registered? <a href="/register" style={{color:'#4481eb'}}>Register</a></h5>
             </Col>
           </Row>
         </Container>

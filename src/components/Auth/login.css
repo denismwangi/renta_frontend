@@ -6,7 +6,7 @@
 .container-login {
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(139, 129, 129);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -64,40 +64,59 @@ form.sign-in-form {
   margin-left: 600px;
   border-radius: 15px;
 }
-
+#sort{
+  padding-left: 17px;
+  width: 180px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+#sort:focus{
+  outline: none !important;
+  border:1px solid #B9F6CA;
+  
+}
 .input-field {
-  background: none;
-  outline: none;
-  border: none;
+ 
+  outline: #44ebd5;
+  border: 1px solid lightgray;
   width: 300px;
   /* max-width: 580px; */
 
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   margin: 10px 0;
   height: 45px;
   border-radius: 5px;
-  display: grid;
-  grid-template-columns: 15% 85%;
+
   padding: 0 0.4rem;
   position: relative;
+ 
+}
+.h-5{
+  color: rgba(51, 49, 49, 0.678);
+   text-align: center;
+}
+.input-field:focus{
+  outline: none !important;
+  border:1px solid #B9F6CA;
 }
 
-.input-field i {
+/* .input-field i {
   text-align: center;
   line-height: 55px;
   color: #acacac;
   transition: 0.5s;
   font-size: 1.1rem;
-}
+} */
 
 .input-field input {
-  background: none;
-  outline: none;
-  border: none;
+  background:red;
+  /* outline: none;
+ 
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #333;
+  color: #333; */
 }
 
 .input-field input::placeholder {
@@ -134,14 +153,33 @@ form.sign-in-form {
   color: #4481eb;
   border-color: #4481eb;
 }
+h4 a{
+  color: #4481eb;
+}
+
+.h-3{
+  margin-top: 20px;
+  
+}
+.h-4{
+  margin-top: 30px;
+  text-align: center;
+  color: #aaa;
+}
+.h-2{
+  margin-top: 30px;
+  text-align: center;
+ 
+}
 
 .btn {
   width: 310px;
-  background-color: #5995fd;
+  /* background-color: #5995fd; */
+  background-color:#2abe8a ;
   border: none;
   outline: none;
   height: 39px;
-  border-radius: 9px;
+  border-radius: 3px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
@@ -233,10 +271,12 @@ form.sign-in-form {
 .right-panel .content {
   transform: translateX(800px);
 }
-h3{
+.h-3{
   
   margin-left: 220px;
 }
+
+
 
 /* ANIMATION */
 
