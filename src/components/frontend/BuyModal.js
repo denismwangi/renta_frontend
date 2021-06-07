@@ -1,43 +1,32 @@
 import './modal.css';
 import {Input,Button, FormGroup, Form} from 'reactstrap';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import AuthService from '../Auth/service/auth.service';
+import authService from '../Auth/service/auth.service';
 
 const URL = "http://localhost:8080/api/v1/houses";
 const BuyModal = ({ handleClose, show, children }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
- 
-  // const [data, setData] = useState({
-  //   category: "",
-  //   roomSize: "",
-  //   price: "",
-  //   location: "",
-  //   description: "",
-  //   file:null
-  // })
+  const [currentUser, setCurrentUser] = useState();
+
+  useEffect(() =>{
+    const owner = authService.getCurrentUser((currentUser)=> currentUser.id === owner.id);
+    setCurrentUser(owner);
+  }, []);
+
   const [category, setCategory] = useState("");
   const [roomSize, setRoomSize ] = useState("");
   const [price, setPrice] = useState("");
   const [location, setLocation] = useState("");
   const [description, setDescripton] = useState("");
   const [file, setFile] = useState(null);
-  
-  // function handle(e){
-  //   const newData = {...data}
-  //   newData[e.target.id] = e.target.value
-  //   setData(newData)
-  //   console.log(newData)
 
-  // }
+
   function Submit(contentType, data, setResponse){
     //e.preventDefault()
     axios({
-      // category: data.category,
-      // roomSize: data.roomSize,
-      // price: data.price,
-      // location: data.location,
-      // description: data.description,
-      // file: data.file
+ 
       url: `${URL}/create`,
       method: 'POST',
       data: data,
@@ -59,10 +48,12 @@ const BuyModal = ({ handleClose, show, children }) => {
     formData.append("location", location);
     formData.append("description", description);
     formData.append("file", file);
+    formData.append("userId", currentUser.id);
     
    
     Submit("multipart/form-data", formData, (msg) => console.log(msg));
     }
+
 
   return (
     <div className={showHideClassName}>
@@ -131,6 +122,16 @@ const BuyModal = ({ handleClose, show, children }) => {
               //onChange={(e)=>handle(e)}id="file" value={data.file}
               onChange={(e) => setFile(e.target.files[0])}
               />
+              {
+                currentUser &&
+               <input class="form-control"
+            type="hidden"
+              name="userId" 
+               value = {currentUser.id}
+              
+              />
+              }
+                
   </div>
   <Button type="submit" onClick={uploadWithFormData}   className="modal-btn">
                 Submit

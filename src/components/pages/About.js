@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 import MapContainer from "../frontend/MapCointainer";
 
 import BuyModal from './BuyModal';

@@ -16,6 +16,7 @@ import share from './telegram-plane-brands.svg';
 
 
 
+
 export class HouseList extends Component {
 
    
@@ -35,19 +36,18 @@ export class HouseList extends Component {
        description:'',
        path:'',
        show: false
-      
+      };
+      this.showModal = this.showModal.bind(this);
+      this.hideModal = this.hideModal.bind(this);
+    }
+  
+    showModal = () => {
+      this.setState({ show: true });
     };
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
-    
-  }
-  showModal = () =>{
-    this.setState({show:true});
-  };
-  hideModal = () => {
-    this.setState({show:false});
-  };
-
+  
+    hideModal = () => {
+      this.setState({ show: false });
+    };
 
   componentDidMount(){
     
@@ -107,8 +107,8 @@ handleSearch = (e) =>{
                     <div class="op-wrapper">
                     {/* <Search handleChange={this.handleSearch}/> */}
                   
-                    <BuyModal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
+                    <BuyModal show={this.state.show} handleClose={this.state.hideModal}>
+          
         </BuyModal>
         {/* <button type="button" onClick={this.showModal}>
           Open
